@@ -1,0 +1,2402 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Metafit &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+		<!--
+        //////////////////////////////////////////////////////
+
+        FREE HTML5 TEMPLATE
+        DESIGNED & DEVELOPED by FreeHTML5.co
+
+        Website: 		http://freehtml5.co/
+        Email: 			info@freehtml5.co
+        Twitter: 		http://twitter.com/fh5co
+        Facebook: 		https://www.facebook.com/fh5co
+
+        //////////////////////////////////////////////////////
+         -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+<!--	&lt;!&ndash; Animate.css &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/animate.css">-->
+<!--	&lt;!&ndash; Icomoon Icon Fonts&ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/icomoon.css">-->
+<!--	&lt;!&ndash; Bootstrap  &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/bootstrap.css">-->
+
+<!--	&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/magnific-popup.css">-->
+
+<!--	&lt;!&ndash; Owl Carousel  &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/owl.carousel.min.css">-->
+<!--	<link rel="stylesheet" href="../static/css/owl.theme.default.min.css">-->
+
+<!--	&lt;!&ndash; Theme style  &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="../static/css/style.css">-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style_my_level.css') }}">
+
+<!--	&lt;!&ndash; Modernizr JS &ndash;&gt;-->
+<!--&lt;!&ndash;	<script src="../static/js/modernizr-2.6.2.min.js"></script>&ndash;&gt;-->
+<!--	&lt;!&ndash; FOR IE9 below &ndash;&gt;-->
+<!--	&lt;!&ndash;[if lt IE 9]>-->
+<!--&lt;!&ndash;        <script src="../static/js/respond.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;        <![endif]&ndash;&gt;&ndash;&gt;-->
+
+	</head>
+	<body style="background-image: url(../static/images/fundo_my_level_body.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+
+		<section class="forms-section row Fundo-level d-flex justify-content-center flex-align-center">
+
+            <!-- Container Principal -->
+            <div class="container" id="container">
+    <!-- Formulário do Treino -->
+    <div class="form-container sign-in-container">
+        <form id="formTreino">
+            <h1>FORMULÁRIO - SEU TREINO</h1>
+            <p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify">Nos fale seu objetivo</p>
+
+            <!-- Objetivo -->
+            <div class="customCheckBoxHolder row">
+                <div class="col-md-6 col-12">
+                    <input class="customCheckBoxInput" id="cCB1" type="radio" name="objetivo" value="Perder peso">
+                    <label class="customCheckBoxWrapper" for="cCB1">
+                        <div class="customCheckBox">
+                            <div class="inner">Perder peso</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <input class="customCheckBoxInput" id="cCB2" type="radio" name="objetivo" value="Ganhar músculo">
+                    <label class="customCheckBoxWrapper" for="cCB2">
+                        <div class="customCheckBox">
+                            <div class="inner">Ganhar músculo</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <input class="customCheckBoxInput" id="cCB3" type="radio" name="objetivo" value="Desenvolver músculos">
+                    <label class="customCheckBoxWrapper" for="cCB3">
+                        <div class="customCheckBox">
+                            <div class="inner">Desenvolver músculos</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <input class="customCheckBoxInput" id="cCB4" type="radio" name="objetivo" value="Ficar definido">
+                    <label class="customCheckBoxWrapper" for="cCB4">
+                        <div class="customCheckBox">
+                            <div class="inner">Ficar definido</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Peso e Altura -->
+            <p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify; margin-top: 20px;">
+                Nos informe seu peso e sua altura
+            </p>
+            <input type="text" id="peso" placeholder="Peso * kg (ex: 75.5 ou 75,5)" pattern="[0-9]+([,.][0-9]+)?" required />
+            <input type="text" id="altura" placeholder="Altura * m (ex: 1.75 ou 1,75)" pattern="[0-9]+([,.][0-9]+)?" required />
+
+            <!-- Experiência -->
+            <div class="control-group">
+                <h3 style="font-size: 16px; margin-bottom: 15px;">Quanto tempo pratica exercícios?</h3>
+                <label class="control control--checkbox">a mais de 5 anos
+                    <input type="radio" name="experiencia" value="a mais de 5 anos" checked>
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">a 4 anos
+                    <input type="radio" name="experiencia" value="a 4 anos">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">a mais de 1 ano
+                    <input type="radio" name="experiencia" value="a mais de 1 ano">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">a menos de 1 ano
+                    <input type="radio" name="experiencia" value="a menos de 1 ano">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">nunca pratiquei antes
+                    <input type="radio" name="experiencia" value="nunca pratiquei antes">
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+            <!-- Acesso -->
+            <div class="control-group">
+                <h3 style="font-size: 16px; margin-bottom: 15px;">Onde você treina?</h3>
+                <label class="control control--checkbox">Academia
+                    <input type="radio" name="acesso" value="academia" checked>
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Casa
+                    <input type="radio" name="acesso" value="casa">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Parque/Área externa
+                    <input type="radio" name="acesso" value="parque">
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+            <!-- Loading -->
+            <div class="loading" id="loadingTreino" style="display: none;">
+                <div class="spinner"></div>
+                <p>Gerando seu treino personalizado...</p>
+            </div>
+
+            <!-- Botão para atualizar treino -->
+            <div class="mt-3" id="atualizarTreinoContainer" style="display: none;">
+                <button type="button" id="btnAtualizarTreino" class="btn btn-secondary w-100">
+                    <i class="bi bi-arrow-clockwise"></i> Atualizar Meu Treino
+                </button>
+            </div>
+
+            <a href="/" class="mb-2 d-block">Voltar para home</a>
+            <button type="submit" id="btnGerarTreino">Gerar Meu Treino</button>
+        </form>
+    </div>
+
+    <!-- Formulário da Agenda -->
+    <div class="form-container sign-up-container">
+        <form id="formAgenda" method="POST">
+            <h1>Minha Agenda</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="bi bi-calendar-check"></i></a>
+                <a href="#" class="social"><i class="bi bi-calendar-plus"></i></a>
+            </div>
+
+            <div class="form-group">
+                <label for="selectTreino">Selecione a Atividade:</label>
+                <select id="selectTreino" class="form-control" required>
+                    <option value="">Carregando opções...</option>
+                </select>
+                <small class="form-text text-muted">Escolha entre treinos, dietas e descanso</small>
+            </div>
+
+            <div class="form-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" class="form-control" required />
+            </div>
+
+            <div class="control-group">
+                <h3>Escolha os dias da semana</h3>
+                <label class="control control--checkbox">Domingo
+                    <input type="checkbox" name="dia_semana" value="Domingo">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Segunda-feira
+                    <input type="checkbox" name="dia_semana" value="Segunda-feira" checked>
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Terça-feira
+                    <input type="checkbox" name="dia_semana" value="Terça-feira">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Quarta-feira
+                    <input type="checkbox" name="dia_semana" value="Quarta-feira">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Quinta-feira
+                    <input type="checkbox" name="dia_semana" value="Quinta-feira">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Sexta-feira
+                    <input type="checkbox" name="dia_semana" value="Sexta-feira">
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Sábado
+                    <input type="checkbox" name="dia_semana" value="Sábado">
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+            <div class="loading" id="loadingAgenda" style="display: none;">
+                <div class="spinner"></div>
+                <p>Salvando sua agenda...</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar Agenda</button>
+            <a href="/all_my_training" class="btn btn-link d-block mt-2">Ver meu treino completo</a>
+        </form>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay-container" style="background-image: url(../static/images/fundo_my_level.png);">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Bem-vindo!</h1>
+                <p>Agora que viu seus exercícios, monte sua agenda</p>
+                <button class="ghost" id="signIn">Voltar para o treino</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Monte sua agenda!</h1>
+                <p>Clique no botão abaixo para criar sua agenda de exercícios</p>
+                <button class="ghost" id="signUp">Montar Agenda</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Iniciando configuração da página...');
+
+    // Configurar troca entre formulários
+    configurarTrocaFormularios();
+
+    // Configurar formulário de treino
+    configurarFormularioTreino();
+
+    // Carregar atividades para agenda
+    carregarAtividadesAgenda();
+
+    // Configurar formulário da agenda
+    configurarFormularioAgenda();
+
+    // Verificar se já existe treino
+    verificarTreinoExistente();
+});
+
+function configurarTrocaFormularios() {
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    if (signUpButton && signInButton && container) {
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+            console.log('Mudando para agenda');
+            // Recarregar atividades quando mudar para agenda
+            carregarAtividadesAgenda();
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+            console.log('Mudando para treino');
+        });
+    }
+}
+
+function carregarAtividadesAgenda() {
+    console.log('Carregando atividades para agenda...');
+
+    fetch('/api/atividades_disponiveis')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Atividades recebidas:', data);
+
+            const select = document.getElementById('selectTreino');
+            if (!select) {
+                console.error('Select não encontrado');
+                return;
+            }
+
+            if (data.success && data.atividades && data.atividades.length > 0) {
+                select.innerHTML = '<option value="">Selecione uma atividade</option>';
+
+                // Adicionar opções simples
+                data.atividades.forEach(atividade => {
+                    const option = document.createElement('option');
+                    option.value = atividade.id;
+                    option.textContent = atividade.nome;
+                    option.dataset.tipo = atividade.tipo;
+                    option.dataset.descricao = atividade.descricao || '';
+                    select.appendChild(option);
+                });
+
+                console.log(`✅ ${data.atividades.length} atividades carregadas`);
+            } else {
+                select.innerHTML = '<option value="">Nenhuma atividade disponível</option>';
+                console.warn('Nenhuma atividade disponível');
+            }
+        })
+        .catch(error => {
+            console.error('❌ Erro ao carregar atividades:', error);
+            const select = document.getElementById('selectTreino');
+            if (select) {
+                select.innerHTML = '<option value="">Erro ao carregar atividades</option>';
+            }
+        });
+}
+
+function configurarFormularioAgenda() {
+    const formAgenda = document.getElementById('formAgenda');
+    if (!formAgenda) {
+        console.error('Formulário da agenda não encontrado');
+        return;
+    }
+
+    console.log('Configurando formulário da agenda...');
+
+    formAgenda.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Formulário da agenda submetido');
+
+        // Coletar dados
+        const selectTreino = document.getElementById('selectTreino');
+        const horarioInput = document.getElementById('horario');
+        const checkboxes = document.querySelectorAll('input[name="dia_semana"]:checked');
+
+        // Validações
+        if (!selectTreino || !selectTreino.value) {
+            alert('Por favor, selecione uma atividade!');
+            selectTreino.focus();
+            return;
+        }
+
+        if (!horarioInput || !horarioInput.value) {
+            alert('Por favor, informe o horário!');
+            horarioInput.focus();
+            return;
+        }
+
+        if (checkboxes.length === 0) {
+            alert('Por favor, selecione pelo menos um dia da semana!');
+            return;
+        }
+
+        const selectedOption = selectTreino.options[selectTreino.selectedIndex];
+        const atividadeNome = selectedOption.textContent;
+        const atividadeTipo = selectedOption.dataset.tipo || 'treino';
+
+        console.log('Atividade selecionada:', {
+            nome: atividadeNome,
+            tipo: atividadeTipo
+        });
+
+        // Preparar itens da agenda
+        const itensAgenda = Array.from(checkboxes).map(checkbox => ({
+            horario: horarioInput.value,
+            dia_semana: checkbox.value
+        }));
+
+        // Dados para enviar
+        const agendaData = {
+            tipo_atividade: atividadeTipo,
+            atividade_nome: atividadeNome,
+            itens_agenda: itensAgenda
+        };
+
+        console.log('Enviando dados da agenda:', agendaData);
+
+        // Mostrar loading
+        const loadingAgenda = document.getElementById('loadingAgenda');
+        if (loadingAgenda) loadingAgenda.style.display = 'flex';
+
+        // Enviar para API
+        fetch('/api/salvar_agenda', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(agendaData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (loadingAgenda) loadingAgenda.style.display = 'none';
+
+            console.log('Resposta da agenda:', data);
+
+            if (data.success) {
+                alert(`✅ Agenda salva com sucesso!\n${data.itens_salvos} dias programados\nAtividade: ${data.atividade}`);
+
+                // Limpar formulário (opcional)
+                formAgenda.reset();
+
+                // Selecionar a primeira opção novamente
+                if (selectTreino) {
+                    selectTreino.selectedIndex = 0;
+                }
+
+                // Redirecionar após 2 segundos
+                setTimeout(() => {
+                    window.location.href = '/all_my_training';
+                }, 2000);
+
+            } else {
+                alert(`❌ Erro ao salvar agenda: ${data.error || 'Erro desconhecido'}`);
+                console.error('Erro detalhado:', data);
+            }
+        })
+        .catch(error => {
+            if (loadingAgenda) loadingAgenda.style.display = 'none';
+            console.error('❌ Erro de conexão:', error);
+            alert('❌ Erro de conexão. Verifique sua internet e tente novamente.');
+        });
+    });
+}
+
+function configurarFormularioTreino() {
+    const formTreino = document.getElementById('formTreino');
+    if (!formTreino) {
+        console.error('Formulário de treino não encontrado');
+        return;
+    }
+
+    console.log('Configurando formulário de treino...');
+
+    formTreino.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Formulário de treino submetido');
+
+        // Coletar dados
+        const objetivo = document.querySelector('input[name="objetivo"]:checked');
+        const experiencia = document.querySelector('input[name="experiencia"]:checked');
+        const acesso = document.querySelector('input[name="acesso"]:checked');
+        const pesoInput = document.getElementById('peso');
+        const alturaInput = document.getElementById('altura');
+
+        // Validações
+        if (!objetivo) {
+            alert('Por favor, selecione um objetivo!');
+            return;
+        }
+
+        if (!experiencia) {
+            alert('Por favor, selecione sua experiência!');
+            return;
+        }
+
+        if (!acesso) {
+            alert('Por favor, selecione onde você treina!');
+            return;
+        }
+
+        if (!pesoInput || !pesoInput.value.trim()) {
+            alert('Por favor, informe seu peso!');
+            pesoInput.focus();
+            return;
+        }
+
+        if (!alturaInput || !alturaInput.value.trim()) {
+            alert('Por favor, informe sua altura!');
+            alturaInput.focus();
+            return;
+        }
+
+        // Preparar dados
+        const formData = {
+            peso: pesoInput.value.replace(',', '.'),
+            altura: alturaInput.value.replace(',', '.'),
+            experiencia: experiencia.value,
+            objetivo: objetivo.value,
+            acesso: acesso.value
+        };
+
+        console.log('Enviando dados do treino:', formData);
+
+        // Mostrar loading
+        const loadingTreino = document.getElementById('loadingTreino');
+        if (loadingTreino) loadingTreino.style.display = 'flex';
+
+        // Enviar para API
+        fetch('/api/salvar_treino', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (loadingTreino) loadingTreino.style.display = 'none';
+
+            console.log('Resposta do treino:', data);
+
+            if (data.success) {
+                alert('✅ Treino personalizado criado com sucesso!\nAgora configure sua agenda.');
+
+                // Atualizar atividades disponíveis
+                carregarAtividadesAgenda();
+
+                // Mostrar botão de atualização
+                const atualizarContainer = document.getElementById('atualizarTreinoContainer');
+                if (atualizarContainer) {
+                    atualizarContainer.style.display = 'block';
+                }
+
+                // Mudar para o formulário da agenda
+                const container = document.getElementById('container');
+                if (container) {
+                    container.classList.add("right-panel-active");
+                }
+
+                // Rolar para o topo
+                window.scrollTo(0, 0);
+
+            } else {
+                alert(`❌ Erro: ${data.error || 'Não foi possível criar o treino'}`);
+                console.error('Erro detalhado:', data);
+            }
+        })
+        .catch(error => {
+            if (loadingTreino) loadingTreino.style.display = 'none';
+            console.error('❌ Erro no envio:', error);
+            alert('❌ Erro de conexão. Verifique sua internet e tente novamente.');
+        });
+    });
+
+    // Configurar botão de atualização
+    const btnAtualizar = document.getElementById('btnAtualizarTreino');
+    if (btnAtualizar) {
+        btnAtualizar.onclick = atualizarTreinoExistente;
+    }
+}
+
+function verificarTreinoExistente() {
+    fetch('/api/treinos_usuario')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.treinos && data.treinos.length > 0) {
+                // Mostrar botão de atualização
+                const atualizarContainer = document.getElementById('atualizarTreinoContainer');
+                if (atualizarContainer) {
+                    atualizarContainer.style.display = 'block';
+                }
+
+                // Mudar texto do botão principal
+                const btnGerar = document.getElementById('btnGerarTreino');
+                if (btnGerar) {
+                    btnGerar.textContent = 'Criar Novo Treino';
+                }
+
+                // Preencher formulário com dados existentes (opcional)
+                preencherFormularioComTreinoExistente(data.treinos[0]);
+
+                console.log('Treino existente encontrado');
+            }
+        })
+        .catch(error => {
+            console.log('Não há treino existente ou erro na verificação:', error);
+        });
+}
+
+function preencherFormularioComTreinoExistente(treino) {
+    // Preencher peso
+    const pesoInput = document.getElementById('peso');
+    if (pesoInput && treino.peso_usuario) {
+        pesoInput.value = treino.peso_usuario;
+    }
+
+    // Preencher altura
+    const alturaInput = document.getElementById('altura');
+    if (alturaInput && treino.altura_usuario) {
+        alturaInput.value = treino.altura_usuario;
+    }
+
+    // Selecionar objetivo
+    if (treino.objetivo_usuario) {
+        const objetivoInputs = document.querySelectorAll('input[name="objetivo"]');
+        objetivoInputs.forEach(input => {
+            if (input.value === treino.objetivo_usuario) {
+                input.checked = true;
+            }
+        });
+    }
+
+    // Selecionar experiência
+    if (treino.experiencia) {
+        const experienciaInputs = document.querySelectorAll('input[name="experiencia"]');
+        experienciaInputs.forEach(input => {
+            if (input.value === treino.experiencia) {
+                input.checked = true;
+            }
+        });
+    }
+}
+
+function atualizarTreinoExistente() {
+    console.log('Atualizando treino existente...');
+
+    if (!confirm('Deseja atualizar seu treino com novos dados?')) {
+        return;
+    }
+
+    // Coletar dados atuais do formulário
+    const objetivo = document.querySelector('input[name="objetivo"]:checked');
+    const experiencia = document.querySelector('input[name="experiencia"]:checked');
+    const acesso = document.querySelector('input[name="acesso"]:checked');
+    const pesoInput = document.getElementById('peso');
+    const alturaInput = document.getElementById('altura');
+
+    if (!objetivo || !experiencia || !acesso || !pesoInput || !alturaInput) {
+        alert('Por favor, preencha todos os campos primeiro!');
+        return;
+    }
+
+    const dadosAtualizacao = {
+        peso: pesoInput.value.replace(',', '.'),
+        altura: alturaInput.value.replace(',', '.'),
+        experiencia: experiencia.value,
+        objetivo: objetivo.value,
+        acesso: acesso.value
+    };
+
+    console.log('Dados para atualização:', dadosAtualizacao);
+
+    // Mostrar loading
+    const loadingTreino = document.getElementById('loadingTreino');
+    if (loadingTreino) loadingTreino.style.display = 'flex';
+
+    fetch('/api/atualizar_treino', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(dadosAtualizacao)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (loadingTreino) loadingTreino.style.display = 'none';
+
+        if (data.success) {
+            alert('✅ Treino atualizado com sucesso!\n' + (data.message || ''));
+            console.log('Novo treino ID:', data.treino_id);
+
+            // Recarregar atividades
+            carregarAtividadesAgenda();
+
+            // Redirecionar para ver o novo treino
+            setTimeout(() => {
+                window.location.href = '/all_my_training';
+            }, 1500);
+
+        } else {
+            alert(`❌ Erro: ${data.error}`);
+        }
+    })
+    .catch(error => {
+        if (loadingTreino) loadingTreino.style.display = 'none';
+        console.error('Erro:', error);
+        alert('❌ Erro de conexão');
+    });
+}
+</script>
+
+{#<script>#}
+{#document.addEventListener('DOMContentLoaded', function() {#}
+{#    console.log('Iniciando carregamento de opções...');#}
+{##}
+{#    // Verificar se já existe um treino#}
+{#    verificarTreinoExistente();#}
+{##}
+{#    // Carregar opções de treino para o select#}
+{#    carregarOpcoesTreino();#}
+{##}
+{#    // Configurar formulário da agenda#}
+{#    configurarFormularioAgenda();#}
+{##}
+{#    // Configurar troca entre formulários#}
+{#    configurarTrocaFormularios();#}
+{##}
+{#    // Configurar formulário de treino#}
+{#    configurarFormularioTreino();#}
+{#});#}
+{##}
+{#function verificarTreinoExistente() {#}
+{#    fetch('/api/treinos_usuario')#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            if (data.success && data.treinos && data.treinos.length > 0) {#}
+{#                // Mostrar botão de atualização#}
+{#                const atualizarContainer = document.getElementById('atualizarTreinoContainer');#}
+{#                if (atualizarContainer) {#}
+{#                    atualizarContainer.style.display = 'block';#}
+{#                }#}
+{##}
+{#                // Mudar texto do botão principal#}
+{#                const btnGerar = document.getElementById('btnGerarTreino');#}
+{#                if (btnGerar) {#}
+{#                    btnGerar.textContent = 'Criar Novo Treino';#}
+{#                }#}
+{##}
+{#                console.log('Treino existente encontrado');#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            console.log('Não há treino existente ou erro na verificação');#}
+{#        });#}
+{#}#}
+{##}
+{#function carregarOpcoesTreino() {#}
+{#    console.log('Carregando opções de treino...');#}
+{##}
+{#    fetch('/api/treinos_disponiveis')#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            console.log('Dados recebidos:', data);#}
+{##}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (!select) {#}
+{#                console.error('Select não encontrado');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            if (data.success && data.opcoes && data.opcoes.length > 0) {#}
+{#                select.innerHTML = '<option value="">Selecione uma atividade</option>';#}
+{##}
+{#                // Agrupar por tipo#}
+{#                const grupos = {};#}
+{#                data.opcoes.forEach(opcao => {#}
+{#                    if (!grupos[opcao.tipo]) {#}
+{#                        grupos[opcao.tipo] = [];#}
+{#                    }#}
+{#                    grupos[opcao.tipo].push(opcao);#}
+{#                });#}
+{##}
+{#                // Adicionar opções agrupadas#}
+{#                for (const [tipo, opcoes] of Object.entries(grupos)) {#}
+{#                    const optgroup = document.createElement('optgroup');#}
+{#                    optgroup.label = tipo === 'treino' ? 'Treinos' :#}
+{#                                     tipo === 'dieta' ? 'Dietas' :#}
+{#                                     tipo === 'recuperacao' ? 'Recuperação' : 'Outros';#}
+{##}
+{#                    opcoes.forEach(opcao => {#}
+{#                        const option = document.createElement('option');#}
+{#                        option.value = opcao.id;#}
+{#                        option.textContent = opcao.nome;#}
+{#                        option.dataset.tipo = opcao.tipo;#}
+{#                        option.dataset.descricao = opcao.descricao || '';#}
+{#                        option.dataset.exercicios = JSON.stringify(opcao.exercicios || []);#}
+{#                        optgroup.appendChild(option);#}
+{#                    });#}
+{##}
+{#                    select.appendChild(optgroup);#}
+{#                }#}
+{##}
+{#                console.log(`✅ ${data.opcoes.length} opções carregadas`);#}
+{##}
+{#            } else {#}
+{#                select.innerHTML = '<option value="">Nenhuma opção disponível</option>';#}
+{#                console.warn('Nenhuma opção disponível');#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            console.error('❌ Erro ao carregar opções:', error);#}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (select) {#}
+{#                select.innerHTML = '<option value="">Erro ao carregar opções</option>';#}
+{#            }#}
+{#        });#}
+{#}#}
+{##}
+{#function configurarFormularioAgenda() {#}
+{#    const formAgenda = document.getElementById('formAgenda');#}
+{#    if (!formAgenda) {#}
+{#        console.error('Formulário da agenda não encontrado');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    console.log('Configurando formulário da agenda...');#}
+{##}
+{#    formAgenda.addEventListener('submit', function(e) {#}
+{#        e.preventDefault();#}
+{#        console.log('Formulário da agenda submetido');#}
+{##}
+{#        // Coletar dados#}
+{#        const selectTreino = document.getElementById('selectTreino');#}
+{#        const horarioInput = document.getElementById('horario');#}
+{#        const checkboxes = document.querySelectorAll('input[name="dia_semana"]:checked');#}
+{##}
+{#        // Validações#}
+{#        if (!selectTreino || !selectTreino.value) {#}
+{#            alert('Por favor, selecione uma atividade!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        if (!horarioInput || !horarioInput.value) {#}
+{#            alert('Por favor, informe o horário!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        if (checkboxes.length === 0) {#}
+{#            alert('Por favor, selecione pelo menos um dia da semana!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        const selectedOption = selectTreino.options[selectTreino.selectedIndex];#}
+{#        const atividadeId = selectTreino.value;#}
+{#        const atividadeNome = selectedOption.textContent;#}
+{#        const atividadeTipo = selectedOption.dataset.tipo || 'treino';#}
+{#        const atividadeDesc = selectedOption.dataset.descricao || '';#}
+{##}
+{#        console.log('Atividade selecionada:', {#}
+{#            id: atividadeId,#}
+{#            nome: atividadeNome,#}
+{#            tipo: atividadeTipo,#}
+{#            desc: atividadeDesc#}
+{#        });#}
+{##}
+{#        // Preparar itens da agenda#}
+{#        const itensAgenda = Array.from(checkboxes).map(checkbox => ({#}
+{#            horario: horarioInput.value,#}
+{#            dia_semana: checkbox.value#}
+{#        }));#}
+{##}
+{#        // Dados para enviar#}
+{#        const agendaData = {#}
+{#            tipo_atividade: atividadeTipo,#}
+{#            atividade_nome: atividadeNome,#}
+{#            atividade_desc: atividadeDesc,#}
+{#            itens_agenda: itensAgenda#}
+{#        };#}
+{##}
+{#        console.log('Enviando dados da agenda:', agendaData);#}
+{##}
+{#        // Mostrar loading#}
+{#        const loadingAgenda = document.getElementById('loadingAgenda');#}
+{#        if (loadingAgenda) loadingAgenda.style.display = 'flex';#}
+{##}
+{#        // Enviar para API#}
+{#        fetch('/api/salvar_agenda', {#}
+{#            method: 'POST',#}
+{#            headers: {'Content-Type': 'application/json'},#}
+{#            body: JSON.stringify(agendaData)#}
+{#        })#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            if (loadingAgenda) loadingAgenda.style.display = 'none';#}
+{##}
+{#            console.log('Dados da resposta:', data);#}
+{##}
+{#            if (data.success) {#}
+{#                alert(`✅ Agenda salva com sucesso!\n${data.itens_salvos} dias programados\nAtividade: ${data.atividade}`);#}
+{##}
+{#                // Limpar formulário#}
+{#                formAgenda.reset();#}
+{##}
+{#                // Redirecionar após 2 segundos#}
+{#                setTimeout(() => {#}
+{#                    window.location.href = '/all_my_training';#}
+{#                }, 2000);#}
+{##}
+{#            } else {#}
+{#                alert(`❌ Erro ao salvar agenda: ${data.error || 'Erro desconhecido'}`);#}
+{#                console.error('Erro detalhado:', data);#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            if (loadingAgenda) loadingAgenda.style.display = 'none';#}
+{#            console.error('❌ Erro de conexão:', error);#}
+{#            alert('❌ Erro de conexão. Verifique o console para detalhes.');#}
+{#        });#}
+{#    });#}
+{#}#}
+{##}
+{#function configurarTrocaFormularios() {#}
+{#    const signUpButton = document.getElementById('signUp');#}
+{#    const signInButton = document.getElementById('signIn');#}
+{#    const container = document.getElementById('container');#}
+{##}
+{#    if (signUpButton && signInButton && container) {#}
+{#        signUpButton.addEventListener('click', () => {#}
+{#            container.classList.add("right-panel-active");#}
+{#            console.log('Mudando para agenda');#}
+{#            // Recarregar opções quando mudar para agenda#}
+{#            carregarOpcoesTreino();#}
+{#        });#}
+{##}
+{#        signInButton.addEventListener('click', () => {#}
+{#            container.classList.remove("right-panel-active");#}
+{#            console.log('Mudando para treino');#}
+{#        });#}
+{#    }#}
+{#}#}
+{##}
+{#function configurarFormularioTreino() {#}
+{#    const formTreino = document.getElementById('formTreino');#}
+{#    if (!formTreino) {#}
+{#        console.error('Formulário de treino não encontrado');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    console.log('Configurando formulário de treino...');#}
+{##}
+{#    // Configurar botão de atualização#}
+{#    const btnAtualizar = document.getElementById('btnAtualizarTreino');#}
+{#    if (btnAtualizar) {#}
+{#        btnAtualizar.onclick = atualizarTreinoExistente;#}
+{#    }#}
+{##}
+{#    // Configurar envio do formulário principal#}
+{#    formTreino.addEventListener('submit', function(e) {#}
+{#        e.preventDefault();#}
+{#        console.log('Formulário de treino submetido');#}
+{##}
+{#        // Coletar dados#}
+{#        const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{#        const experiencia = document.querySelector('input[name="experiencia"]:checked');#}
+{#        const acesso = document.querySelector('input[name="acesso"]:checked');#}
+{#        const peso = document.getElementById('peso').value;#}
+{#        const altura = document.getElementById('altura').value;#}
+{##}
+{#        // Validações#}
+{#        if (!objetivo || !experiencia || !acesso || !peso || !altura) {#}
+{#            alert('Por favor, preencha todos os campos!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        // Preparar dados#}
+{#        const formData = {#}
+{#            peso: peso.replace(',', '.'),#}
+{#            altura: altura.replace(',', '.'),#}
+{#            experiencia: experiencia.value,#}
+{#            objetivo: objetivo.value,#}
+{#            acesso: acesso.value#}
+{#        };#}
+{##}
+{#        console.log('Enviando dados do treino:', formData);#}
+{##}
+{#        // Mostrar loading#}
+{#        const loadingTreino = document.getElementById('loadingTreino');#}
+{#        if (loadingTreino) loadingTreino.style.display = 'flex';#}
+{##}
+{#        // Enviar para API#}
+{#        fetch('/api/salvar_treino', {#}
+{#            method: 'POST',#}
+{#            headers: {'Content-Type': 'application/json'},#}
+{#            body: JSON.stringify(formData)#}
+{#        })#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{##}
+{#            console.log('Dados da resposta:', data);#}
+{##}
+{#            if (data.success) {#}
+{#                alert('✅ Treino personalizado criado com sucesso!\nAgora configure sua agenda.');#}
+{##}
+{#                // Atualizar opções disponíveis#}
+{#                carregarOpcoesTreino();#}
+{##}
+{#                // Mostrar botão de atualização#}
+{#                const atualizarContainer = document.getElementById('atualizarTreinoContainer');#}
+{#                if (atualizarContainer) {#}
+{#                    atualizarContainer.style.display = 'block';#}
+{#                }#}
+{##}
+{#                // Mudar para o formulário da agenda#}
+{#                const container = document.getElementById('container');#}
+{#                if (container) {#}
+{#                    container.classList.add("right-panel-active");#}
+{#                }#}
+{##}
+{#                // Rolar para o topo#}
+{#                window.scrollTo(0, 0);#}
+{##}
+{#            } else {#}
+{#                alert(`❌ Erro: ${data.error || 'Não foi possível criar o treino'}`);#}
+{#                console.error('Erro detalhado:', data);#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#            console.error('❌ Erro no envio:', error);#}
+{#            alert('❌ Erro de conexão. Verifique o console para detalhes.');#}
+{#        });#}
+{#    });#}
+{#}#}
+{##}
+{#function atualizarTreinoExistente() {#}
+{#    console.log('Atualizando treino existente...');#}
+{##}
+{#    if (!confirm('Deseja atualizar seu treino com novos dados?')) {#}
+{#        return;#}
+{#    }#}
+{##}
+{#    // Coletar dados atuais do formulário#}
+{#    const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{#    const experiencia = document.querySelector('input[name="experiencia"]:checked');#}
+{#    const acesso = document.querySelector('input[name="acesso"]:checked');#}
+{#    const peso = document.getElementById('peso').value;#}
+{#    const altura = document.getElementById('altura').value;#}
+{##}
+{#    if (!objetivo || !experiencia || !acesso || !peso || !altura) {#}
+{#        alert('Por favor, preencha todos os campos primeiro!');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    const dadosAtualizacao = {#}
+{#        peso: peso.replace(',', '.'),#}
+{#        altura: altura.replace(',', '.'),#}
+{#        experiencia: experiencia.value,#}
+{#        objetivo: objetivo.value,#}
+{#        acesso: acesso.value#}
+{#    };#}
+{##}
+{#    console.log('Dados para atualização:', dadosAtualizacao);#}
+{##}
+{#    // Mostrar loading#}
+{#    const loadingTreino = document.getElementById('loadingTreino');#}
+{#    if (loadingTreino) loadingTreino.style.display = 'flex';#}
+{##}
+{#    fetch('/api/atualizar_treino', {#}
+{#        method: 'POST',#}
+{#        headers: {'Content-Type': 'application/json'},#}
+{#        body: JSON.stringify(dadosAtualizacao)#}
+{#    })#}
+{#    .then(response => response.json())#}
+{#    .then(data => {#}
+{#        if (loadingTreino) loadingTreino.style.display = 'none';#}
+{##}
+{#        if (data.success) {#}
+{#            alert('✅ Treino atualizado com sucesso!\n' + data.message);#}
+{#            console.log('Novo treino ID:', data.treino_id);#}
+{##}
+{#            // Recarregar opções#}
+{#            carregarOpcoesTreino();#}
+{##}
+{#            // Redirecionar para ver o novo treino#}
+{#            setTimeout(() => {#}
+{#                window.location.href = '/all_my_training';#}
+{#            }, 1500);#}
+{##}
+{#        } else {#}
+{#            alert(`❌ Erro: ${data.error}`);#}
+{#        }#}
+{#    })#}
+{#    .catch(error => {#}
+{#        if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#        console.error('Erro:', error);#}
+{#        alert('❌ Erro de conexão');#}
+{#    });#}
+{#}#}
+{#</script>#}
+
+
+{#<div class="container" id="container">#}
+{#    <!-- Formulário do Treino -->#}
+{#    <div class="form-container sign-in-container">#}
+{#        <form id="formTreino">#}
+{#            <h1>FORMULÁRIO - SEU TREINO</h1>#}
+{#            <p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify">Nos fale seu objetivo</p>#}
+{##}
+{#            <!-- Objetivo -->#}
+{#            <div class="customCheckBoxHolder row">#}
+{#                <div class="col-md-6 col-12">#}
+{#                    <input class="customCheckBoxInput" id="cCB1" type="radio" name="objetivo" value="Perder peso">#}
+{#                    <label class="customCheckBoxWrapper" for="cCB1">#}
+{#                        <div class="customCheckBox">#}
+{#                            <div class="inner">Perder peso</div>#}
+{#                        </div>#}
+{#                    </label>#}
+{#                </div>#}
+{##}
+{#                <div class="col-md-6 col-12">#}
+{#                    <input class="customCheckBoxInput" id="cCB2" type="radio" name="objetivo" value="Ganhar músculo">#}
+{#                    <label class="customCheckBoxWrapper" for="cCB2">#}
+{#                        <div class="customCheckBox">#}
+{#                            <div class="inner">Ganhar músculo</div>#}
+{#                        </div>#}
+{#                    </label>#}
+{#                </div>#}
+{##}
+{#                <div class="col-md-6 col-12">#}
+{#                    <input class="customCheckBoxInput" id="cCB3" type="radio" name="objetivo" value="Desenvolver músculos">#}
+{#                    <label class="customCheckBoxWrapper" for="cCB3">#}
+{#                        <div class="customCheckBox">#}
+{#                            <div class="inner">Desenvolver músculos</div>#}
+{#                        </div>#}
+{#                    </label>#}
+{#                </div>#}
+{##}
+{#                <div class="col-md-6 col-12">#}
+{#                    <input class="customCheckBoxInput" id="cCB4" type="radio" name="objetivo" value="Ficar definido">#}
+{#                    <label class="customCheckBoxWrapper" for="cCB4">#}
+{#                        <div class="customCheckBox">#}
+{#                            <div class="inner">Ficar definido</div>#}
+{#                        </div>#}
+{#                    </label>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <!-- Peso e Altura -->#}
+{#            <p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify; margin-top: 20px;">#}
+{#                Nos informe seu peso e sua altura#}
+{#            </p>#}
+{#            <input type="text" id="peso" placeholder="Peso * kg (ex: 75.5 ou 75,5)" pattern="[0-9]+([,.][0-9]+)?" required />#}
+{#            <input type="text" id="altura" placeholder="Altura * m (ex: 1.75 ou 1,75)" pattern="[0-9]+([,.][0-9]+)?" required />#}
+{##}
+{##}
+{#            <!-- Experiência -->#}
+{#            <div class="control-group">#}
+{#                <h3 style="font-size: 16px; margin-bottom: 15px;">Quanto tempo pratica exercícios?</h3>#}
+{#                <label class="control control--checkbox">a mais de 5 anos#}
+{#                    <input type="radio" name="experiencia" value="a mais de 5 anos" checked>#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">a 4 anos#}
+{#                    <input type="radio" name="experiencia" value="a 4 anos">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">a mais de 1 ano#}
+{#                    <input type="radio" name="experiencia" value="a mais de 1 ano">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">a menos de 1 ano#}
+{#                    <input type="radio" name="experiencia" value="a menos de 1 ano">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">nunca pratiquei antes#}
+{#                    <input type="radio" name="experiencia" value="nunca pratiquei antes">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#            </div>#}
+{##}
+{#            <!-- Acesso -->#}
+{#            <div class="control-group">#}
+{#                <h3 style="font-size: 16px; margin-bottom: 15px;">Onde você treina?</h3>#}
+{#                <label class="control control--checkbox">Academia#}
+{#                    <input type="radio" name="acesso" value="academia" checked>#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">Casa#}
+{#                    <input type="radio" name="acesso" value="casa">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#                <label class="control control--checkbox">Parque/Área externa#}
+{#                    <input type="radio" name="acesso" value="parque">#}
+{#                    <div class="control__indicator"></div>#}
+{#                </label>#}
+{#            </div>#}
+{##}
+{#            <!-- Loading -->#}
+{#            <div class="loading" id="loadingTreino">#}
+{#                <div class="spinner"></div>#}
+{#                <p>Gerando seu treino personalizado...</p>#}
+{#            </div>#}
+{##}
+{#            <a href="/">Voltar para home</a>#}
+{#            <button type="submit">Gerar Meu Treino</button>#}
+{#        </form>#}
+{#    </div>#}
+{##}
+{#    <!-- Formulário da Agenda -->#}
+{#    <!-- Substitua o formulário da agenda por este: -->#}
+{#<div class="form-container sign-up-container">#}
+{#    <form id="formAgenda" method="POST">#}
+{#        <h1>Minha Agenda</h1>#}
+{#        <div class="social-container">#}
+{#            <a href="#" class="social"><i class="bi bi-calendar-check"></i></a>#}
+{#            <a href="#" class="social"><i class="bi bi-calendar-plus"></i></a>#}
+{#        </div>#}
+{##}
+{#        <div class="form-group">#}
+{#            <label for="selectTreino">Selecione o Treino:</label>#}
+{#            <select id="selectTreino" class="form-control" required>#}
+{#                <option value="">Carregando treinos...</option>#}
+{#            </select>#}
+{#        </div>#}
+{##}
+{#        <div class="form-group">#}
+{#            <label for="horario">Horário:</label>#}
+{#            <input type="time" id="horario" class="form-control" required />#}
+{#        </div>#}
+{##}
+{#        <div class="control-group">#}
+{#            <h3>Escolha os dias da semana</h3>#}
+{#            <label class="control control--checkbox">Domingo#}
+{#                <input type="checkbox" name="dia_semana" value="Domingo">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Segunda-feira#}
+{#                <input type="checkbox" name="dia_semana" value="Segunda-feira" checked>#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Terça-feira#}
+{#                <input type="checkbox" name="dia_semana" value="Terça-feira">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Quarta-feira#}
+{#                <input type="checkbox" name="dia_semana" value="Quarta-feira">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Quinta-feira#}
+{#                <input type="checkbox" name="dia_semana" value="Quinta-feira">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Sexta-feira#}
+{#                <input type="checkbox" name="dia_semana" value="Sexta-feira">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#            <label class="control control--checkbox">Sábado#}
+{#                <input type="checkbox" name="dia_semana" value="Sábado">#}
+{#                <div class="control__indicator"></div>#}
+{#            </label>#}
+{#        </div>#}
+{##}
+{#        <div class="loading" id="loadingAgenda" style="display: none;">#}
+{#            <div class="spinner"></div>#}
+{#            <p>Salvando sua agenda...</p>#}
+{#        </div>#}
+{##}
+{#        <button type="submit" class="btn btn-primary">Salvar Agenda</button>#}
+{#    </form>#}
+{#</div>#}
+{##}
+{#    <!-- Overlay -->#}
+{#    <div class="overlay-container" style="background-image: url(../static/images/fundo_my_level.png);">#}
+{#        <div class="overlay">#}
+{#            <div class="overlay-panel overlay-left">#}
+{#                <h1>Bem-vindo!</h1>#}
+{#                <p>Agora que viu seus exercícios, monte sua agenda</p>#}
+{#                <button class="ghost" id="signIn">Voltar para o treino</button>#}
+{#            </div>#}
+{#            <div class="overlay-panel overlay-right">#}
+{#                <h1>Monte sua agenda!</h1>#}
+{#                <p>Clique no botão abaixo para criar sua agenda de exercícios</p>#}
+{#                <button class="ghost" id="signUp">Montar Agenda</button>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#            <!-- ADICIONE ESTE SCRIPT NO FINAL DO my_level.html, ANTES DO </body> -->#}
+{##}
+{#            <script>#}
+{#// FUNÇÃO PRINCIPAL - CARREGAR OPÇÕES DE TREINO#}
+{#document.addEventListener('DOMContentLoaded', function() {#}
+{#    console.log('Iniciando carregamento de opções...');#}
+{##}
+{#    // Carregar opções de treino para o select#}
+{#    carregarOpcoesTreino();#}
+{##}
+{#    // Configurar formulário da agenda#}
+{#    configurarFormularioAgenda();#}
+{##}
+{#    // Configurar troca entre formulários#}
+{#    configurarTrocaFormularios();#}
+{##}
+{#    // Configurar formulário de treino#}
+{#    configurarFormularioTreino();#}
+{#});#}
+{##}
+{#function carregarOpcoesTreino() {#}
+{#    console.log('Carregando opções de treino...');#}
+{##}
+{#    fetch('/api/treinos_disponiveis')#}
+{#        .then(response => {#}
+{#            console.log('Resposta recebida:', response.status);#}
+{#            return response.json();#}
+{#        })#}
+{#        .then(data => {#}
+{#            console.log('Dados recebidos:', data);#}
+{##}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (!select) {#}
+{#                console.error('Select não encontrado, criando...');#}
+{#                criarSelectTreino();#}
+{#                return;#}
+{#            }#}
+{##}
+{#            if (data.success && data.opcoes && data.opcoes.length > 0) {#}
+{#                select.innerHTML = '<option value="">Selecione uma atividade</option>';#}
+{##}
+{#                // Agrupar por tipo#}
+{#                const grupos = {};#}
+{#                data.opcoes.forEach(opcao => {#}
+{#                    if (!grupos[opcao.tipo]) {#}
+{#                        grupos[opcao.tipo] = [];#}
+{#                    }#}
+{#                    grupos[opcao.tipo].push(opcao);#}
+{#                });#}
+{##}
+{#                // Adicionar opções agrupadas#}
+{#                for (const [tipo, opcoes] of Object.entries(grupos)) {#}
+{#                    const optgroup = document.createElement('optgroup');#}
+{#                    optgroup.label = tipo === 'treino' ? 'Treinos' :#}
+{#                                     tipo === 'dieta' ? 'Dietas' :#}
+{#                                     tipo === 'descanso' ? 'Descanso' : 'Outros';#}
+{##}
+{#                    opcoes.forEach(opcao => {#}
+{#                        const option = document.createElement('option');#}
+{#                        option.value = opcao.id;#}
+{#                        option.textContent = opcao.nome;#}
+{#                        option.dataset.tipo = opcao.tipo;#}
+{#                        option.dataset.descricao = opcao.descricao;#}
+{#                        option.dataset.exercicios = JSON.stringify(opcao.exercicios || []);#}
+{#                        optgroup.appendChild(option);#}
+{#                    });#}
+{##}
+{#                    select.appendChild(optgroup);#}
+{#                }#}
+{##}
+{#                console.log(`✅ ${data.opcoes.length} opções carregadas`);#}
+{##}
+{#                // Se houver informações do usuário, mostrar#}
+{#                if (data.user_info) {#}
+{#                    console.log(`👤 Usuário: ${data.user_info.nome}, Idade: ${data.user_info.idade}, Objetivo: ${data.user_info.objetivo}`);#}
+{#                }#}
+{##}
+{#            } else {#}
+{#                select.innerHTML = '<option value="">Nenhuma opção disponível</option>';#}
+{#                console.warn('Nenhuma opção disponível');#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            console.error('❌ Erro ao carregar opções:', error);#}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (select) {#}
+{#                select.innerHTML = '<option value="">Erro ao carregar opções</option>';#}
+{#            }#}
+{#        });#}
+{#}#}
+{##}
+{#function criarSelectTreino() {#}
+{#    const formAgenda = document.getElementById('formAgenda');#}
+{#    if (!formAgenda) return;#}
+{##}
+{#    const selectHTML = `#}
+{#        <div class="form-group">#}
+{#            <label for="selectTreino">Selecione a Atividade:</label>#}
+{#            <select id="selectTreino" class="form-control" required>#}
+{#                <option value="">Carregando opções...</option>#}
+{#            </select>#}
+{#            <small class="form-text text-muted">Escolha entre treinos, dietas e descanso</small>#}
+{#        </div>#}
+{#    `;#}
+{##}
+{#    // Inserir após o social-container#}
+{#    const socialContainer = formAgenda.querySelector('.social-container');#}
+{#    if (socialContainer) {#}
+{#        socialContainer.insertAdjacentHTML('afterend', selectHTML);#}
+{##}
+{#        // Tentar carregar novamente#}
+{#        setTimeout(carregarOpcoesTreino, 500);#}
+{#    }#}
+{#}#}
+{##}
+{#function configurarFormularioAgenda() {#}
+{#    const formAgenda = document.getElementById('formAgenda');#}
+{#    if (!formAgenda) {#}
+{#        console.error('Formulário da agenda não encontrado');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    console.log('Configurando formulário da agenda...');#}
+{##}
+{#    formAgenda.addEventListener('submit', function(e) {#}
+{#        e.preventDefault();#}
+{#        console.log('Formulário da agenda submetido');#}
+{##}
+{#        // Coletar dados#}
+{#        const selectTreino = document.getElementById('selectTreino');#}
+{#        const horarioInput = document.getElementById('horario');#}
+{#        const checkboxes = document.querySelectorAll('input[name="dia_semana"]:checked');#}
+{##}
+{#        // Validações#}
+{#        if (!selectTreino || !selectTreino.value) {#}
+{#            alert('Por favor, selecione uma atividade!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        if (!horarioInput || !horarioInput.value) {#}
+{#            alert('Por favor, informe o horário!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        if (checkboxes.length === 0) {#}
+{#            alert('Por favor, selecione pelo menos um dia da semana!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        const selectedOption = selectTreino.options[selectTreino.selectedIndex];#}
+{#        const atividadeId = selectTreino.value;#}
+{#        const atividadeNome = selectedOption.textContent;#}
+{#        const atividadeTipo = selectedOption.dataset.tipo || 'treino';#}
+{#        const atividadeDesc = selectedOption.dataset.descricao || '';#}
+{##}
+{#        console.log('Atividade selecionada:', {#}
+{#            id: atividadeId,#}
+{#            nome: atividadeNome,#}
+{#            tipo: atividadeTipo,#}
+{#            desc: atividadeDesc#}
+{#        });#}
+{##}
+{#        // Preparar itens da agenda#}
+{#        const itensAgenda = Array.from(checkboxes).map(checkbox => ({#}
+{#            horario: horarioInput.value,#}
+{#            dia_semana: checkbox.value#}
+{#        }));#}
+{##}
+{#        // Dados para enviar#}
+{#        const agendaData = {#}
+{#            tipo_atividade: atividadeTipo,#}
+{#            atividade_nome: atividadeNome,#}
+{#            atividade_desc: atividadeDesc,#}
+{#            itens_agenda: itensAgenda#}
+{#        };#}
+{##}
+{#        console.log('Enviando dados da agenda:', agendaData);#}
+{##}
+{#        // Mostrar loading#}
+{#        const loadingAgenda = document.getElementById('loadingAgenda');#}
+{#        if (loadingAgenda) loadingAgenda.style.display = 'flex';#}
+{##}
+{#        // Enviar para API#}
+{#        fetch('/api/salvar_agenda', {#}
+{#            method: 'POST',#}
+{#            headers: {'Content-Type': 'application/json'},#}
+{#            body: JSON.stringify(agendaData)#}
+{#        })#}
+{#        .then(response => {#}
+{#            console.log('Resposta da agenda:', response.status);#}
+{#            return response.json();#}
+{#        })#}
+{#        .then(data => {#}
+{#            if (loadingAgenda) loadingAgenda.style.display = 'none';#}
+{##}
+{#            console.log('Dados da resposta:', data);#}
+{##}
+{#            if (data.success) {#}
+{#                alert(`✅ Agenda salva com sucesso!\n${data.itens_salvos} dias programados\nAtividade: ${data.atividade}`);#}
+{##}
+{#                // Limpar formulário#}
+{#                formAgenda.reset();#}
+{##}
+{#                // Recarregar opções#}
+{#                setTimeout(() => {#}
+{#                    carregarOpcoesTreino();#}
+{#                }, 1000);#}
+{##}
+{#                // Redirecionar após 2 segundos#}
+{#                setTimeout(() => {#}
+{#                    window.location.href = '/all_my_training';#}
+{#                }, 2000);#}
+{##}
+{#            } else {#}
+{#                alert(`❌ Erro ao salvar agenda: ${data.error || 'Erro desconhecido'}`);#}
+{#                console.error('Erro detalhado:', data);#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            if (loadingAgenda) loadingAgenda.style.display = 'none';#}
+{#            console.error('❌ Erro de conexão:', error);#}
+{#            alert('❌ Erro de conexão. Verifique o console para detalhes.');#}
+{#        });#}
+{#    });#}
+{#}#}
+{##}
+{#function configurarTrocaFormularios() {#}
+{#    const signUpButton = document.getElementById('signUp');#}
+{#    const signInButton = document.getElementById('signIn');#}
+{#    const container = document.getElementById('container');#}
+{##}
+{#    if (signUpButton && signInButton && container) {#}
+{#        signUpButton.addEventListener('click', () => {#}
+{#            container.classList.add("right-panel-active");#}
+{#            console.log('Mudando para agenda');#}
+{#            // Recarregar opções quando mudar para agenda#}
+{#            carregarOpcoesTreino();#}
+{#        });#}
+{##}
+{#        signInButton.addEventListener('click', () => {#}
+{#            container.classList.remove("right-panel-active");#}
+{#            console.log('Mudando para treino');#}
+{#        });#}
+{#    }#}
+{#}#}
+{##}
+{#function configurarFormularioTreino() {#}
+{#    const formTreino = document.getElementById('formTreino');#}
+{#    if (!formTreino) {#}
+{#        console.error('Formulário de treino não encontrado');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    console.log('Configurando formulário de treino...');#}
+{##}
+{#    // Botão para atualizar treino#}
+{#    const btnAtualizar = document.createElement('button');#}
+{#    btnAtualizar.type = 'button';#}
+{#    btnAtualizar.className = 'btn btn-secondary mt-3';#}
+{#    btnAtualizar.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Atualizar Meu Treino';#}
+{#    btnAtualizar.onclick = atualizarTreinoExistente;#}
+{##}
+{#    formTreino.appendChild(btnAtualizar);#}
+{##}
+{#    // Configurar envio do formulário principal#}
+{#    formTreino.addEventListener('submit', function(e) {#}
+{#        e.preventDefault();#}
+{#        console.log('Formulário de treino submetido');#}
+{##}
+{#        // Coletar dados#}
+{#        const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{#        const experiencia = document.querySelector('input[name="experiencia"]:checked');#}
+{#        const acesso = document.querySelector('input[name="acesso"]:checked');#}
+{#        const peso = document.getElementById('peso').value;#}
+{#        const altura = document.getElementById('altura').value;#}
+{##}
+{#        // Validações#}
+{#        if (!objetivo || !experiencia || !acesso || !peso || !altura) {#}
+{#            alert('Por favor, preencha todos os campos!');#}
+{#            return;#}
+{#        }#}
+{##}
+{#        // Preparar dados#}
+{#        const formData = {#}
+{#            peso: peso.replace(',', '.'),#}
+{#            altura: altura.replace(',', '.'),#}
+{#            experiencia: experiencia.value,#}
+{#            objetivo: objetivo.value,#}
+{#            acesso: acesso.value#}
+{#        };#}
+{##}
+{#        console.log('Enviando dados do treino:', formData);#}
+{##}
+{#        // Mostrar loading#}
+{#        const loadingTreino = document.getElementById('loadingTreino');#}
+{#        if (loadingTreino) loadingTreino.style.display = 'flex';#}
+{##}
+{#        // Enviar para API#}
+{#        fetch('/api/salvar_treino', {#}
+{#            method: 'POST',#}
+{#            headers: {'Content-Type': 'application/json'},#}
+{#            body: JSON.stringify(formData)#}
+{#        })#}
+{#        .then(response => {#}
+{#            console.log('Resposta do treino:', response.status);#}
+{#            return response.json();#}
+{#        })#}
+{#        .then(data => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{##}
+{#            console.log('Dados da resposta:', data);#}
+{##}
+{#            if (data.success) {#}
+{#                alert('✅ Treino personalizado criado com sucesso!\nAgora configure sua agenda.');#}
+{##}
+{#                // Atualizar opções disponíveis#}
+{#                carregarOpcoesTreino();#}
+{##}
+{#                // Mudar para o formulário da agenda#}
+{#                const container = document.getElementById('container');#}
+{#                if (container) {#}
+{#                    container.classList.add("right-panel-active");#}
+{#                }#}
+{##}
+{#                // Rolar para o topo#}
+{#                window.scrollTo(0, 0);#}
+{##}
+{#            } else {#}
+{#                alert(`❌ Erro: ${data.error || 'Não foi possível criar o treino'}`);#}
+{#                console.error('Erro detalhado:', data);#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#            console.error('❌ Erro no envio:', error);#}
+{#            alert('❌ Erro de conexão. Verifique o console para detalhes.');#}
+{#        });#}
+{#    });#}
+{#}#}
+{##}
+{#function atualizarTreinoExistente() {#}
+{#    console.log('Atualizando treino existente...');#}
+{##}
+{#    if (!confirm('Deseja atualizar seu treino com novos dados?')) {#}
+{#        return;#}
+{#    }#}
+{##}
+{#    // Coletar dados atuais do formulário#}
+{#    const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{#    const experiencia = document.querySelector('input[name="experiencia"]:checked');#}
+{#    const acesso = document.querySelector('input[name="acesso"]:checked');#}
+{#    const peso = document.getElementById('peso').value;#}
+{#    const altura = document.getElementById('altura').value;#}
+{##}
+{#    if (!objetivo || !experiencia || !acesso || !peso || !altura) {#}
+{#        alert('Por favor, preencha todos os campos primeiro!');#}
+{#        return;#}
+{#    }#}
+{##}
+{#    const dadosAtualizacao = {#}
+{#        peso: peso.replace(',', '.'),#}
+{#        altura: altura.replace(',', '.'),#}
+{#        experiencia: experiencia.value,#}
+{#        objetivo: objetivo.value,#}
+{#        acesso: acesso.value#}
+{#    };#}
+{##}
+{#    console.log('Dados para atualização:', dadosAtualizacao);#}
+{##}
+{#    if (confirm('Isso criará um novo treino personalizado. A agenda será ajustada. Continuar?')) {#}
+{#        // Mostrar loading#}
+{#        const loadingTreino = document.getElementById('loadingTreino');#}
+{#        if (loadingTreino) loadingTreino.style.display = 'flex';#}
+{##}
+{#        fetch('/api/atualizar_treino', {#}
+{#            method: 'POST',#}
+{#            headers: {'Content-Type': 'application/json'},#}
+{#            body: JSON.stringify(dadosAtualizacao)#}
+{#        })#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{##}
+{#            if (data.success) {#}
+{#                alert('✅ Treino atualizado com sucesso!');#}
+{#                console.log('Novo treino ID:', data.treino_id);#}
+{##}
+{#                // Recarregar opções#}
+{#                carregarOpcoesTreino();#}
+{##}
+{#            } else {#}
+{#                alert(`❌ Erro: ${data.error}`);#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#            console.error('Erro:', error);#}
+{#            alert('❌ Erro de conexão');#}
+{#        });#}
+{#    }#}
+{#}#}
+{##}
+{#// Função para pré-visualizar exercícios#}
+{#function previewExercicios() {#}
+{#    const select = document.getElementById('selectTreino');#}
+{#    if (!select || !select.value) return;#}
+{##}
+{#    const selectedOption = select.options[select.selectedIndex];#}
+{#    const exercicios = JSON.parse(selectedOption.dataset.exercicios || '[]');#}
+{##}
+{#    if (exercicios.length > 0) {#}
+{#        let preview = 'Exercícios incluídos:\n';#}
+{#        exercicios.forEach((ex, i) => {#}
+{#            preview += `${i+1}. ${ex.exercise} (${ex.series}x${ex.reps})\n`;#}
+{#        });#}
+{##}
+{#        // Criar modal ou mostrar alerta#}
+{#        alert(preview);#}
+{#    }#}
+{#}#}
+{#</script>#}
+
+{#<script>#}
+{#// CORREÇÃO DO FORMULÁRIO DE TREINO#}
+{#document.addEventListener('DOMContentLoaded', function() {#}
+{#    const formTreino = document.getElementById('formTreino');#}
+{##}
+{#    if (formTreino) {#}
+{#        console.log('✅ Formulário de treino encontrado');#}
+{##}
+{#        // Remover qualquer listener existente#}
+{#        formTreino.onsubmit = null;#}
+{##}
+{#        // Adicionar novo listener#}
+{#        formTreino.addEventListener('submit', async function(e) {#}
+{#            e.preventDefault();  // IMPEDIR ENVIO PADRÃO (GET)#}
+{#            console.log('📝 Formulário submetido (interceptado)');#}
+{##}
+{#            // Mostrar loading#}
+{#            const loadingTreino = document.getElementById('loadingTreino');#}
+{#            if (loadingTreino) loadingTreino.style.display = 'flex';#}
+{##}
+{#            try {#}
+{#                // Coletar dados#}
+{#                const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{#                const experiencia = document.querySelector('input[name="experiencia"]:checked');#}
+{#                const acesso = document.querySelector('input[name="acesso"]:checked');#}
+{#                const peso = document.getElementById('peso').value;#}
+{#                const altura = document.getElementById('altura').value;#}
+{##}
+{#                // Validações#}
+{#                if (!objetivo || !experiencia || !acesso || !peso || !altura) {#}
+{#                    alert('Por favor, preencha todos os campos!');#}
+{#                    if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#                    return;#}
+{#                }#}
+{##}
+{#                // Preparar dados#}
+{#                const formData = {#}
+{#                    peso: peso.replace(',', '.'),#}
+{#                    altura: altura.replace(',', '.'),#}
+{#                    experiencia: experiencia.value,#}
+{#                    objetivo: objetivo.value,#}
+{#                    acesso: acesso.value#}
+{#                };#}
+{##}
+{#                console.log('📤 Enviando dados:', formData);#}
+{##}
+{#                // Enviar via POST#}
+{#                const response = await fetch('/api/salvar_treino', {#}
+{#                    method: 'POST',#}
+{#                    headers: {#}
+{#                        'Content-Type': 'application/json',#}
+{#                    },#}
+{#                    body: JSON.stringify(formData)#}
+{#                });#}
+{##}
+{#                console.log('📥 Resposta recebida, status:', response.status);#}
+{##}
+{#                const data = await response.json();#}
+{#                console.log('📊 Dados da resposta:', data);#}
+{##}
+{#                if (loadingTreino) loadingTreino.style.display = 'none';#}
+{##}
+{#                if (data.success) {#}
+{#                    alert('✅ Treino gerado com sucesso!');#}
+{#                    console.log('✅ Treino ID:', data.treino_id);#}
+{##}
+{#                    // Atualizar lista de treinos para a agenda#}
+{#                    carregarTreinosParaSelect();#}
+{##}
+{#                    // Mudar para o formulário da agenda#}
+{#                    const container = document.getElementById('container');#}
+{#                    if (container) {#}
+{#                        container.classList.add("right-panel-active");#}
+{#                    }#}
+{##}
+{#                    // Rolar para o topo#}
+{#                    window.scrollTo(0, 0);#}
+{##}
+{#                } else {#}
+{#                    alert('❌ Erro: ' + (data.error || 'Não foi possível salvar o treino'));#}
+{#                    console.error('❌ Erro detalhado:', data);#}
+{#                }#}
+{##}
+{#            } catch (error) {#}
+{#                if (loadingTreino) loadingTreino.style.display = 'none';#}
+{#                console.error('❌ Erro no envio:', error);#}
+{#                alert('❌ Erro de conexão. Verifique o console para detalhes.');#}
+{#            }#}
+{#        });#}
+{##}
+{#        console.log('✅ Listener do formulário configurado');#}
+{##}
+{#    } else {#}
+{#        console.error('❌ Formulário de treino não encontrado!');#}
+{#    }#}
+{##}
+{#    // Função para carregar treinos no select (já existente)#}
+{#    function carregarTreinosParaSelect() {#}
+{#        const selectTreino = document.getElementById('selectTreino');#}
+{#        if (!selectTreino) {#}
+{#            console.log('⚠️ Select de treinos não encontrado, criando...');#}
+{##}
+{#            // Adicionar select se não existir#}
+{#            const formAgenda = document.getElementById('formAgenda');#}
+{#            if (formAgenda) {#}
+{#                const selectHTML = `#}
+{#                    <div class="form-group">#}
+{#                        <label for="selectTreino">Selecione o Treino:</label>#}
+{#                        <select id="selectTreino" class="form-control" required>#}
+{#                            <option value="">Carregando treinos...</option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                `;#}
+{##}
+{#                // Inserir após o social-container#}
+{#                const socialContainer = formAgenda.querySelector('.social-container');#}
+{#                if (socialContainer) {#}
+{#                    socialContainer.insertAdjacentHTML('afterend', selectHTML);#}
+{#                }#}
+{#            }#}
+{#        }#}
+{##}
+{#        // Agora carregar os treinos#}
+{#        fetch('/api/treinos_usuario')#}
+{#            .then(response => response.json())#}
+{#            .then(data => {#}
+{#                const select = document.getElementById('selectTreino');#}
+{#                if (select && data.success) {#}
+{#                    select.innerHTML = '<option value="">Selecione um treino</option>';#}
+{##}
+{#                    data.treinos.forEach(treino => {#}
+{#                        const option = document.createElement('option');#}
+{#                        option.value = treino.id_treino;#}
+{#                        option.textContent = `${treino.nome_treino} (${treino.objetivo_usuario})`;#}
+{#                        option.dataset.nome = treino.nome_treino;#}
+{#                        select.appendChild(option);#}
+{#                    });#}
+{##}
+{#                    console.log('✅ Treinos carregados:', data.treinos.length);#}
+{##}
+{#                    // Selecionar automaticamente se houver apenas um#}
+{#                    if (data.treinos.length === 1) {#}
+{#                        select.value = data.treinos[0].id_treino;#}
+{#                    }#}
+{#                }#}
+{#            })#}
+{#            .catch(error => {#}
+{#                console.error('❌ Erro ao carregar treinos:', error);#}
+{#            });#}
+{#    }#}
+{##}
+{#    // Chamar quando carregar a página#}
+{#    carregarTreinosParaSelect();#}
+{##}
+{#    // Configurar troca entre formulários (já existente)#}
+{#    const signUpButton = document.getElementById('signUp');#}
+{#    const signInButton = document.getElementById('signIn');#}
+{#    const container = document.getElementById('container');#}
+{##}
+{#    if (signUpButton && signInButton && container) {#}
+{#        signUpButton.addEventListener('click', () => {#}
+{#            container.classList.add("right-panel-active");#}
+{#            // Recarregar treinos quando mudar para agenda#}
+{#            carregarTreinosParaSelect();#}
+{#        });#}
+{##}
+{#        signInButton.addEventListener('click', () => {#}
+{#            container.classList.remove("right-panel-active");#}
+{#        });#}
+{#    }#}
+{##}
+{#    console.log('✅ Script de correção carregado');#}
+{#});#}
+{#</script>#}
+
+{#            <script>#}
+{#// Carregar treinos para o select#}
+{#function carregarTreinosParaSelect() {#}
+{#    fetch('/api/treinos_usuario')#}
+{#        .then(response => response.json())#}
+{#        .then(data => {#}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (select && data.success) {#}
+{#                select.innerHTML = '<option value="">Selecione um treino</option>';#}
+{##}
+{#                data.treinos.forEach(treino => {#}
+{#                    const option = document.createElement('option');#}
+{#                    option.value = treino.id_treino;#}
+{#                    option.textContent = `${treino.nome_treino} (${treino.objetivo_usuario})`;#}
+{#                    option.dataset.nome = treino.nome_treino;#}
+{#                    select.appendChild(option);#}
+{#                });#}
+{##}
+{#                // Se tiver apenas um treino, selecionar automaticamente#}
+{#                if (data.treinos.length === 1) {#}
+{#                    select.value = data.treinos[0].id_treino;#}
+{#                }#}
+{#            }#}
+{#        })#}
+{#        .catch(error => {#}
+{#            console.error('Erro ao carregar treinos:', error);#}
+{#            const select = document.getElementById('selectTreino');#}
+{#            if (select) {#}
+{#                select.innerHTML = '<option value="">Erro ao carregar treinos</option>';#}
+{#            }#}
+{#        });#}
+{#}#}
+{##}
+{#// Quando a página carregar#}
+{#document.addEventListener('DOMContentLoaded', function() {#}
+{#    carregarTreinosParaSelect();#}
+{##}
+{#    // Configurar formulário da agenda#}
+{#    const formAgenda = document.getElementById('formAgenda');#}
+{#    if (formAgenda) {#}
+{#        formAgenda.addEventListener('submit', function(e) {#}
+{#            e.preventDefault();#}
+{##}
+{#            const treinoSelect = document.getElementById('selectTreino');#}
+{#            const horarioInput = document.getElementById('horario');#}
+{#            const checkboxes = document.querySelectorAll('input[name="dia_semana"]:checked');#}
+{##}
+{#            if (!treinoSelect || !treinoSelect.value) {#}
+{#                alert('Por favor, selecione um treino!');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            if (!horarioInput || !horarioInput.value) {#}
+{#                alert('Por favor, informe o horário!');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            if (checkboxes.length === 0) {#}
+{#                alert('Por favor, selecione pelo menos um dia da semana!');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            const itensAgenda = Array.from(checkboxes).map(checkbox => ({#}
+{#                horario: horarioInput.value,#}
+{#                dia_semana: checkbox.value#}
+{#            }));#}
+{##}
+{#            const dados = {#}
+{#                treino_id: treinoSelect.value,#}
+{#                itens_agenda: itensAgenda#}
+{#            };#}
+{##}
+{#            // Mostrar loading#}
+{#            const loading = document.getElementById('loadingAgenda');#}
+{#            if (loading) loading.style.display = 'flex';#}
+{##}
+{#            fetch('/api/salvar_agenda', {#}
+{#                method: 'POST',#}
+{#                headers: {'Content-Type': 'application/json'},#}
+{#                body: JSON.stringify(dados)#}
+{#            })#}
+{#            .then(response => response.json())#}
+{#            .then(data => {#}
+{#                if (loading) loading.style.display = 'none';#}
+{##}
+{#                if (data.success) {#}
+{#                    alert('Agenda salva com sucesso!');#}
+{#                    formAgenda.reset();#}
+{#                    carregarTreinosParaSelect();#}
+{#                    // Redirecionar após 1 segundo#}
+{#                    setTimeout(() => {#}
+{#                        window.location.href = '/all_my_training';#}
+{#                    }, 1000);#}
+{#                } else {#}
+{#                    alert('Erro ao salvar agenda: ' + (data.error || 'Erro desconhecido'));#}
+{#                }#}
+{#            })#}
+{#            .catch(error => {#}
+{#                if (loading) loading.style.display = 'none';#}
+{#                console.error('Erro:', error);#}
+{#                alert('Erro de conexão. Tente novamente.');#}
+{#            });#}
+{#        });#}
+{#    }#}
+{##}
+{#    // Controle do formulário duplo#}
+{#    const signUpButton = document.getElementById('signUp');#}
+{#    const signInButton = document.getElementById('signIn');#}
+{#    const container = document.getElementById('container');#}
+{##}
+{#    if (signUpButton && signInButton && container) {#}
+{#        signUpButton.addEventListener('click', () => {#}
+{#            container.classList.add("right-panel-active");#}
+{#            carregarTreinosParaSelect();#}
+{#        });#}
+{##}
+{#        signInButton.addEventListener('click', () => {#}
+{#            container.classList.remove("right-panel-active");#}
+{#        });#}
+{#    }#}
+{#});#}
+{#</script>#}
+
+
+
+{#			<div class="container" id="container">#}
+{#				<div class="form-container sign-up-container">#}
+{#					<form action="#">#}
+{#						<h1>Calendário</h1>#}
+{#						<div class="social-container">#}
+{#<!--							<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>-->#}
+{#							<a href="#" class="social"><i class="fab bi bi-calendar-check"></i></a>#}
+{#<!--							<a href="#" class="social"><i class="fab bi bi-calendar-minus"></i></a>-->#}
+{#							<a href="#" class="social"><i class="fab bi bi-calendar-plus"></i></a>#}
+{#<!--							<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>-->#}
+{#<!--							<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>-->#}
+{#						</div>#}
+{#<!--						<span>ou entre de outra forma</span>-->#}
+{#						<input type="text" placeholder="Nome do treino/dieta" />#}
+{#						<input type="text" placeholder="Horário" />#}
+{#						<div class="control-group">#}
+{#							<h1>Escolha o dia da semana</h1>#}
+{#							<label class="control control--checkbox">Domingo#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Segunda-feira#}
+{#								<input type="checkbox" checked="checked"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Terça-feira#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Quarta-feira#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Quinta-feira#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Sexta-feira#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">Sábado#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<!--							<label class="control control&#45;&#45;checkbox">Disabled-->#}
+{#							<!--								<input type="checkbox" disabled="disabled"/>-->#}
+{#							<!--								<div class="control__indicator"></div>-->#}
+{#							<!--							</label>-->#}
+{#							<!--							<label class="control control&#45;&#45;checkbox">Disabled & checked-->#}
+{#							<!--								<input type="checkbox" disabled="disabled" checked="checked"/>-->#}
+{#							<!--								<div class="control__indicator"></div>-->#}
+{#							<!--							</label>-->#}
+{#						</div>#}
+{#<!--						<input type="password" placeholder="Senha" />-->#}
+{#<!--						<input type="text" placeholder="CPF" />-->#}
+{#<!--						<input type="text" placeholder="CEP" />-->#}
+{#<!--						<input type="date" placeholder="Data de nascimento" />-->#}
+{#						<button><a style="text-decoration: none; color: white" href="all_my_training.html">Continuar</a></button>#}
+{#					</form>#}
+{#				</div>#}
+{#				<div class="form-container sign-in-container">#}
+{#					<form action="#">#}
+{#						<h1>FORMULÁRIO - SEU TREINO</h1>#}
+{#						<p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify">Nos fale seu objetivo</p>#}
+{#						<div class="customCheckBoxHolder row">#}
+{##}
+{#							<div class="col-md-4">#}
+{#								<input class="customCheckBoxInput" id="cCB1" type="checkbox">#}
+{#								<label class="customCheckBoxWrapper" for="cCB1">#}
+{#									<div class="customCheckBox">#}
+{#										<div class="inner">Perder peso</div>#}
+{#									</div>#}
+{#								</label>#}
+{#							</div>#}
+{##}
+{##}
+{#							<div class="col-md-4">#}
+{#								<input class="customCheckBoxInput" id="cCB2" type="checkbox">#}
+{#								<label class="customCheckBoxWrapper" for="cCB2">#}
+{#									<div class="customCheckBox">#}
+{#										<div class="inner">Ganhar músculo</div>#}
+{#									</div>#}
+{#								</label>#}
+{#							</div>#}
+{##}
+{#							<div class="col-md-4">#}
+{#								<input class="customCheckBoxInput" id="cCB3" type="checkbox">#}
+{#								<label class="customCheckBoxWrapper" for="cCB3">#}
+{#									<div class="customCheckBox">#}
+{#										<div class="inner">Desenvolver músculos</div>#}
+{#									</div>#}
+{#								</label>#}
+{#							</div>#}
+{##}
+{#							<div class="col-md-4">#}
+{#								<input class="customCheckBoxInput" id="cCB4" type="checkbox">#}
+{#								<label class="customCheckBoxWrapper" for="cCB4">#}
+{#									<div class="customCheckBox">#}
+{#										<div class="inner">Ficar sarado</div>#}
+{#									</div>#}
+{#								</label>#}
+{#							</div>#}
+{##}
+{#						</div>#}
+{#<!--						<span>ou use sua conta já existente</span>-->#}
+{#						<p style="font-weight: bold; font-size: 20px; font-family: Verdana, Geneva, sans-serif; text-align: justify">Nos informe seu peso e sua altura</p>#}
+{#						<input type="number" id="peso" placeholder="Peso * kg" />#}
+{#						<input type="number" id="altura" placeholder="Altura * m" />#}
+{#						<div class="control-group">#}
+{#							<h1>Quanto tempo prática exercícios?</h1>#}
+{#							<label class="control control--checkbox">a mais de 5 anos#}
+{#								<input type="checkbox" checked="checked"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">a 4 anos#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">a mais de 1 ano#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">a menos de 1 ano#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#							<label class="control control--checkbox">nunca pratiquei antes#}
+{#								<input type="checkbox"/>#}
+{#								<div class="control__indicator"></div>#}
+{#							</label>#}
+{#<!--							<label class="control control&#45;&#45;checkbox">Disabled-->#}
+{#<!--								<input type="checkbox" disabled="disabled"/>-->#}
+{#<!--								<div class="control__indicator"></div>-->#}
+{#<!--							</label>-->#}
+{#<!--							<label class="control control&#45;&#45;checkbox">Disabled & checked-->#}
+{#<!--								<input type="checkbox" disabled="disabled" checked="checked"/>-->#}
+{#<!--								<div class="control__indicator"></div>-->#}
+{#<!--							</label>-->#}
+{#						</div>#}
+{#						<a href="/">Voltar para home</a>#}
+{#						<button><a style="text-decoration: none; color: white; margin-bottom: 20px" href="all_my_training.html">Ver resultado</a></button>#}
+{#					</form>#}
+{#				</div>#}
+{#				<div class="overlay-container" style="background-image: url(../static/images/fundo_my_level.png);">#}
+{#					<div class="overlay">#}
+{#						<div class="overlay-panel overlay-left">#}
+{#							<h1>Bem-vindo!</h1>#}
+{#							<p>Agora que viu seus exercícios, monte sua agenda</p>#}
+{#							<button class="ghost" id="signIn">Voltar para a sessão anterior</button>#}
+{#						</div>#}
+{#						<div class="overlay-panel overlay-right">#}
+{#							<h1>Monte sua agenda!</h1>#}
+{#							<p>Clique no botão abaixo para criar sua agenda de exercícios</p>#}
+{#							<button class="ghost" id="signUp">Montar</button>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+
+
+<!--			<div class="container2" style="background-image:url(../static/images/Junte-se_a_nos.png);"></div>-->
+<!--			<div class="subscribe fh5co-pricing container pricing col-lg-12 col-md-8 col-md-2 col-xxl-10">-->
+<!--				<p>FORMULÁRIO - SEU TREINO</p>-->
+<!--				<p>Nos fale seu objetivo</p>-->
+<!--				<div class="customCheckBoxHolder">-->
+
+<!--					<input class="customCheckBoxInput" id="cCB1" type="checkbox">-->
+<!--					<label class="customCheckBoxWrapper" for="cCB1">-->
+<!--						<div class="customCheckBox">-->
+<!--							<div class="inner">Perder peso</div>-->
+<!--						</div>-->
+<!--					</label>-->
+
+<!--					<input class="customCheckBoxInput" id="cCB2" type="checkbox">-->
+<!--					<label class="customCheckBoxWrapper" for="cCB2">-->
+<!--						<div class="customCheckBox">-->
+<!--							<div class="inner">Ganhar músculo</div>-->
+<!--						</div>-->
+<!--					</label>-->
+
+<!--					<input class="customCheckBoxInput" id="cCB3" type="checkbox">-->
+<!--					<label class="customCheckBoxWrapper" for="cCB3">-->
+<!--						<div class="customCheckBox">-->
+<!--							<div class="inner">Desenvolver músculos</div>-->
+<!--						</div>-->
+<!--					</label>-->
+
+<!--					<input class="customCheckBoxInput" id="cCB4" type="checkbox">-->
+<!--					<label class="customCheckBoxWrapper" for="cCB4">-->
+<!--						<div class="customCheckBox">-->
+<!--							<div class="inner">Ficar sarado</div>-->
+<!--						</div>-->
+<!--					</label>-->
+
+<!--				</div>-->
+<!--&lt;!&ndash;				<input placeholder="Seu nome" class="subscribe-input" name="nome" id="nome" type="text">&ndash;&gt;-->
+<!--&lt;!&ndash;				<input placeholder="Sua idade" class="subscribe-input" name="idade" id="idade" type="number">&ndash;&gt;-->
+<!--				<input placeholder="Seu peso * kg" class="subscribe-input" name="peso" id="peso" type="number">-->
+<!--				<input placeholder="Sua altura * centímetros" class="subscribe-input" name="altura" id="altura" type="number">-->
+<!--				<p>A quanto tempo pratica exercícios</p>-->
+<!--				<div class="uiverse-pixel-radio-group">-->
+<!--					<label class="uiverse-pixel-radio">-->
+<!--						<input type="radio" name="pixel-choice" checked="" />-->
+<!--						<span class="label-text">a mais de 5 anos</span>-->
+<!--					</label>-->
+<!--					<label class="uiverse-pixel-radio">-->
+<!--						<input type="radio" name="pixel-choice" />-->
+<!--						<span class="label-text">a 4 anos</span>-->
+<!--					</label>-->
+<!--					<label class="uiverse-pixel-radio">-->
+<!--						<input type="radio" name="pixel-choice" />-->
+<!--						<span class="label-text">a mais de 1 ano</span>-->
+<!--					</label>-->
+<!--					<label class="uiverse-pixel-radio">-->
+<!--						<input type="radio" name="pixel-choice" />-->
+<!--						<span class="label-text">a menos de 1 ano</span>-->
+<!--					</label>-->
+<!--					<label class="uiverse-pixel-radio">-->
+<!--						<input type="radio" name="pixel-choice" />-->
+<!--						<span class="label-text">nunca pratiquei antes</span>-->
+<!--					</label>-->
+<!--				</div>-->
+<!--	&lt;!&ndash;			<input placeholder="" class="subscribe-input" name="email" type="email">&ndash;&gt;-->
+<!--	&lt;!&ndash;			<input placeholder="Your e-mail" class="subscribe-input" name="email" type="email">&ndash;&gt;-->
+<!--				<br>-->
+<!--				<div class="submit-btn">VER RESULTADO</div>-->
+<!--			</div>-->
+        </section>
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+<!--	<script src="../static/js/jquery.min.js"></script>-->
+{#        <script>#}
+{#        // Controle do painel#}
+{#        const signUpButton = document.getElementById('signUp');#}
+{#        const signInButton = document.getElementById('signIn');#}
+{#        const container = document.getElementById('container');#}
+{##}
+{#        signUpButton.addEventListener('click', () => {#}
+{#            container.classList.add('right-panel-active');#}
+{#        });#}
+{##}
+{#        signInButton.addEventListener('click', () => {#}
+{#            container.classList.remove('right-panel-active');#}
+{#        });#}
+{##}
+{#        // Controle do sexo#}
+{#        document.querySelectorAll('.sexo-btn').forEach(btn => {#}
+{#            btn.addEventListener('click', function() {#}
+{#                document.querySelectorAll('.sexo-btn').forEach(b => b.classList.remove('active'));#}
+{#                this.classList.add('active');#}
+{#                document.getElementById('sexo').value = this.dataset.sexo;#}
+{#            });#}
+{#        });#}
+{##}
+{#        // Inicializar sexo masculino como padrão#}
+{#        document.querySelector('.sexo-btn[data-sexo="male"]').classList.add('active');#}
+{##}
+{#        // Formulário do Treino#}
+{#        document.getElementById('formTreino').addEventListener('submit', function(e) {#}
+{#            e.preventDefault();#}
+{##}
+{#            const loading = document.getElementById('loadingTreino');#}
+{#            const submitBtn = this.querySelector('button[type="submit"]');#}
+{##}
+{#            // Validar campos obrigatórios#}
+{#            const peso = document.getElementById('peso').value;#}
+{#            const altura = document.getElementById('altura').value;#}
+{#            const objetivo = document.querySelector('input[name="objetivo"]:checked');#}
+{##}
+{#            if (!peso || !altura || !objetivo) {#}
+{#                alert('Por favor, preencha todos os campos obrigatórios.');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            loading.style.display = 'block';#}
+{#            submitBtn.disabled = true;#}
+{##}
+{#            const formData = {#}
+{#                peso: parseFloat(peso),#}
+{#                altura: parseFloat(altura),#}
+{#                experiencia: document.querySelector('input[name="experiencia"]:checked').value,#}
+{#                objetivo: objetivo.value,#}
+{#                sexo: document.getElementById('sexo').value,#}
+{#                acesso: document.querySelector('input[name="acesso"]:checked').value#}
+{#            };#}
+{##}
+{#            fetch('/api/salvar_treino', {#}
+{#                method: 'POST',#}
+{#                headers: {#}
+{#                    'Content-Type': 'application/json',#}
+{#                },#}
+{#                body: JSON.stringify(formData)#}
+{#            })#}
+{#            .then(response => response.json())#}
+{#            .then(data => {#}
+{#                loading.style.display = 'none';#}
+{#                submitBtn.disabled = false;#}
+{##}
+{#                if (data.success) {#}
+{#                    alert('Treino gerado com sucesso! Redirecionando...');#}
+{#                    setTimeout(() => {#}
+{#                        window.location.href = '/all_my_training';#}
+{#                    }, 1000);#}
+{#                } else {#}
+{#                    alert('Erro ao gerar treino: ' + (data.error || 'Tente novamente'));#}
+{#                }#}
+{#            })#}
+{#            .catch(error => {#}
+{#                console.error('Error:', error);#}
+{#                loading.style.display = 'none';#}
+{#                submitBtn.disabled = false;#}
+{#                alert('Erro ao conectar com o servidor. Tente novamente.');#}
+{#            });#}
+{#        });#}
+{##}
+{#        // Formulário da Agenda#}
+{#        document.getElementById('formAgenda').addEventListener('submit', function(e) {#}
+{#            e.preventDefault();#}
+{##}
+{#            const loading = document.getElementById('loadingAgenda');#}
+{#            const submitBtn = this.querySelector('button[type="submit"]');#}
+{##}
+{#            const diasSelecionados = Array.from(this.querySelectorAll('input[name="dia_semana"]:checked'))#}
+{#                .map(cb => cb.value);#}
+{##}
+{#            if (diasSelecionados.length === 0) {#}
+{#                alert('Selecione pelo menos um dia da semana.');#}
+{#                return;#}
+{#            }#}
+{##}
+{#            loading.style.display = 'block';#}
+{#            submitBtn.disabled = true;#}
+{##}
+{#            const itensAgenda = diasSelecionados.map(dia => ({#}
+{#                nome_atividade: document.getElementById('nomeAtividade').value,#}
+{#                horario: document.getElementById('horario').value,#}
+{#                dia_semana: dia#}
+{#            }));#}
+{##}
+{#            fetch('/api/salvar_agenda', {#}
+{#                method: 'POST',#}
+{#                headers: {#}
+{#                    'Content-Type': 'application/json',#}
+{#                },#}
+{#                body: JSON.stringify({ itens_agenda: itensAgenda })#}
+{#            })#}
+{#            .then(response => response.json())#}
+{#            .then(data => {#}
+{#                loading.style.display = 'none';#}
+{#                submitBtn.disabled = false;#}
+{##}
+{#                if (data.success) {#}
+{#                    alert('Agenda salva com sucesso!');#}
+{#                    this.reset();#}
+{#                    // Marcar segunda-feira como padrão#}
+{#                    document.querySelector('input[name="dia_semana"][value="Segunda-feira"]').checked = true;#}
+{#                } else {#}
+{#                    alert('Erro ao salvar agenda: ' + (data.error || 'Tente novamente'));#}
+{#                }#}
+{#            })#}
+{#            .catch(error => {#}
+{#                console.error('Error:', error);#}
+{#                loading.style.display = 'none';#}
+{#                submitBtn.disabled = false;#}
+{#                alert('Erro ao conectar com o servidor. Tente novamente.');#}
+{#            });#}
+{#        });#}
+{##}
+{#        // Validação em tempo real#}
+{#        document.getElementById('peso').addEventListener('input', function() {#}
+{#            if (this.value < 30) this.value = 30;#}
+{#            if (this.value > 200) this.value = 200;#}
+{#        });#}
+{##}
+{#        document.getElementById('altura').addEventListener('input', function() {#}
+{#            if (this.value < 1.00) this.value = 1.00;#}
+{#            if (this.value > 2.50) this.value = 2.50;#}
+{#        });#}
+{#    </script>#}
+<script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+        <!--	&lt;!&ndash; jQuery Easing &ndash;&gt;-->
+<!--	<script src="../static/js/jquery.easing.1.3.js"></script>-->
+<!--	&lt;!&ndash; Bootstrap &ndash;&gt;-->
+<!--	<script src="../static/js/bootstrap.min.js"></script>-->
+<!--	&lt;!&ndash; Waypoints &ndash;&gt;-->
+<!--	<script src="../static/js/jquery.waypoints.min.js"></script>-->
+<!--	&lt;!&ndash; Stellar Parallax &ndash;&gt;-->
+<!--	<script src="../static/js/jquery.stellar.min.js"></script>-->
+<!--	&lt;!&ndash; Carousel &ndash;&gt;-->
+<!--	<script src="../static/js/owl.carousel.min.js"></script>-->
+<!--	&lt;!&ndash; countTo &ndash;&gt;-->
+<!--	<script src="../static/js/jquery.countTo.js"></script>-->
+<!--	&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+<!--	<script src="../static/js/jquery.magnific-popup.min.js"></script>-->
+<!--	<script src="../static/js/magnific-popup-options.js"></script>-->
+<!--	&lt;!&ndash; Main &ndash;&gt;-->
+<!--	<script src="../static/js/main.js"></script>-->
+
+	</body>
+</html>
+

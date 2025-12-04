@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MetaFit &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="freehtml5.co" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!--
+    //////////////////////////////////////////////////////
+
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FreeHTML5.co
+
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
+
+    //////////////////////////////////////////////////////
+     -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <!--    <link rel="stylesheet" href="../static/css/animate.css">-->
+    <!-- Icomoon Icon Fonts-->
+    <!--    <link rel="stylesheet" href="../static/css/icomoon.css">-->
+    <!-- Bootstrap  -->
+    <!--    <link rel="stylesheet" href="../static/css/bootstrap.css">-->
+
+    <!-- Magnific Popup -->
+    <!--    <link rel="stylesheet" href="../static/css/magnific-popup.css">-->
+
+    <!-- Owl Carousel  -->
+    <!--    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">-->
+    <!--    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">-->
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="../static/css/escolha_foto_style.css">
+<!--    <link rel="stylesheet" href="../static/css/login_style.css">-->
+
+    <!-- Modernizr JS -->
+<!--    <script src="../static/js/modernizr-2.6.2.min.js"></script>-->
+    <!-- FOR IE9 below -->
+<!--    &lt;!&ndash;[if lt IE 9]>-->
+<!--&lt;!&ndash;    <script src="../static/js/respond.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash; &ndash;&gt;    <![endif]&ndash;&gt;-->
+
+</head>
+<body class="hold-transition login-page row" style="background-image: url(../static/images/fundo_perfil_foto.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+
+
+<section class="login row align-items-center justify-content-center d-flex text-center">
+
+    <!-- Mensagens Flash -->
+{#    {% with messages = get_flashed_messages() %}#}
+{#        {% if messages %}#}
+{#            <div class="alert-container">#}
+{#                {% for message in messages %}#}
+{#                    <div class="alert alert-info alert-dismissible fade show" role="alert">#}
+{#                        {{ message }}#}
+{#                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        {% endif %}#}
+{#    {% endwith %}#}
+
+{#    <div class="container" id="container">#}
+{#        <div class="form-container sign-up-container">#}
+{#        </div>#}
+{#        <div class="form-container sign-in-container">#}
+{##}
+{#            <form class="form">#}
+{#                <p class="title">Foto de Perfil </p>#}
+{#                <i class="bi bi-person-workspace"></i>#}
+{#                <p class="message">Escolha uma foto de perfil</p>#}
+{#                <label>#}
+{#                    <label for="meuArquivo" class="botao-arquivo">#}
+{#                        <i class="bi bi-person-add"></i>#}
+{#                    </label>#}
+{##}
+{#                    <input required="" placeholder="" type="file" class="input" id="meuArquivo" accept="image/*">#}
+{##}
+{#                    <div class="preview-container">#}
+{#                        <img id="imagemPreview" src="#" alt="Pré-visualização da imagem" style="display: none;">#}
+{#                    </div>#}
+{#                    <!--                    <input type="file" id="meuArquivo" accept="image/*">-->#}
+{#                    <!--                    <img id="imagemPreview" style="display: none; max-width: 300px; max-height: 300px;">-->#}
+{#                </label>#}
+{#                <button class="submit"><a href="/">Entrar</a></button>#}
+{#                <p class="signin">Deseja pular essa parte? <a href="/">Entrar sem foto de perfil</a> </p>#}
+{#            </form>#}
+{#        </div>#}
+{#        <div class="overlay-container" style="background-image: url(../static/images/fundo_perfil_foto.png);">#}
+{#            <div class="overlay">#}
+{#                <div class="overlay-panel overlay-right">#}
+{#                    <h1>Escolha sua foto de perfil</h1>#}
+{#<!--                    <p>Entre no nosso serviço para aproveitar tudo o que oferecemos</p>-->#}
+{#                    <button class="ghost" id="signUp" style="margin-top: 60px"><a style="text-decoration: none; color: white" href="/">Continuar sem foto</a></button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form class="form" action="/upload_foto" method="POST" enctype="multipart/form-data">
+                <p class="title">Foto de Perfil</p>
+                <i class="bi bi-person-workspace" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <p class="message">Escolha uma foto de perfil</p>
+
+                <label class="file-upload-label">
+                    <div class="botao-arquivo">
+                        <i class="bi bi-camera-fill"></i>
+                        <span>Selecionar Foto</span>
+                    </div>
+                    <input type="file" class="input" id="meuArquivo" name="meuArquivo" accept="image/*" required>
+                </label>
+
+                <div class="preview-container mt-3">
+                    <img id="imagemPreview" src="#" alt="Pré-visualização da imagem" style="display: none; max-width: 200px; max-height: 200px; border-radius: 50%;">
+                </div>
+
+                <button type="submit" class="submit mt-3">Salvar Foto</button>
+                <p class="signin">Deseja pular essa parte? <a href="/">Entrar sem foto de perfil</a></p>
+            </form>
+        </div>
+
+        <div class="overlay-container" style="background-image: url(/static/images/fundo_perfil_foto.png);">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1>Escolha sua foto de perfil</h1>
+                    <p>Personalize seu perfil com uma foto</p>
+                    <button class="ghost" style="margin-top: 60px">
+                        <a style="text-decoration: none; color: white" href="/">Continuar sem foto</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Preview da imagem selecionada
+        document.getElementById('meuArquivo').addEventListener('change', function(e) {
+            const preview = document.getElementById('imagemPreview');
+            const file = e.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+{#    <div class="container" id="container">#}
+{#            <div class="form-container sign-up-container">#}
+{#            </div>#}
+{#            <div class="form-container sign-in-container">#}
+{##}
+{#                <form class="form" method="POST" enctype="multipart/form-data">#}
+{#                    <p class="title">Foto de Perfil </p>#}
+{#                    <i class="bi bi-person-workspace"></i>#}
+{#                    <p class="message">Escolha uma foto de perfil</p>#}
+{#                    <label>#}
+{#                        <label for="meuArquivo" class="botao-arquivo">#}
+{#                            <i class="bi bi-person-add"></i>#}
+{#                        </label>#}
+{##}
+{#                        <input required name="meuArquivo" placeholder="" type="file" class="input" id="meuArquivo" accept="image/*">#}
+{##}
+{#                        <div class="preview-container">#}
+{#                            <img id="imagemPreview" src="#" alt="Pré-visualização da imagem" style="display: none;">#}
+{#                        </div>#}
+{#                    </label>#}
+{#                    <button type="submit" class="submit">Salvar Foto</button>#}
+{#                    <p class="signin">Deseja pular essa parte? <a href="{{ url_for('foto_perfil.pular_foto', user_id=user_id) }}">Continuar sem foto de perfil</a> </p>#}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="overlay-container" style="background-image: url(../static/images/fundo_perfil_foto.png);">#}
+{#                <div class="overlay">#}
+{#                    <div class="overlay-panel overlay-right">#}
+{#                        <h1>Escolha sua foto de perfil</h1>#}
+{#                        <button class="ghost" id="signUp" style="margin-top: 60px">#}
+{#                            <a style="text-decoration: none; color: white" href="{{ url_for('foto_perfil.pular_foto', user_id=user_id) }}">Continuar sem foto</a>#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+    </section>
+
+{#    <script>#}
+{#        // Pré-visualização da imagem#}
+{#        document.getElementById('meuArquivo').addEventListener('change', function(e) {#}
+{#            const preview = document.getElementById('imagemPreview');#}
+{#            const file = e.target.files[0];#}
+{#            #}
+{#            if (file) {#}
+{#                const reader = new FileReader();#}
+{#                #}
+{#                reader.onload = function(e) {#}
+{#                    preview.src = e.target.result;#}
+{#                    preview.style.display = 'block';#}
+{#                }#}
+{#                #}
+{#                reader.readAsDataURL(file);#}
+{#            } else {#}
+{#                preview.style.display = 'none';#}
+{#            }#}
+{#        });#}
+{##}
+{#        // Clique no botão personalizado aciona o input file#}
+{#        document.querySelector('.botao-arquivo').addEventListener('click', function() {#}
+{#            document.getElementById('meuArquivo').click();#}
+{#        });#}
+{#    </script>#}
+{#</section>#}
+
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+<!--<script src="../static/js/perfil.js"></script>-->
+
+<!--&lt;!&ndash; jQuery &ndash;&gt;-->
+<!--<script src="...min.js"></script>-->
+<!--&lt;!&ndash; jQuery Easing &ndash;&gt;-->
+<!--<script src="...easing.1.3.js"></script>-->
+<!--&lt;!&ndash; Bootstrap &ndash;&gt;-->
+<!--<script src="..rap.min.js"></script>-->
+<!--&lt;!&ndash; Waypoints &ndash;&gt;-->
+<!--<script src="...waypoints.min.js"></script>-->
+<!--&lt;!&ndash; Stellar Parallax &ndash;&gt;-->
+<!--<script src="...stellar.min.js"></script>-->
+<!--&lt;!&ndash; Carousel &ndash;&gt;-->
+<!--<script src="..rousel.min.js"></script>-->
+<!--&lt;!&ndash; countTo &ndash;&gt;-->
+<!--<script src="...countTo.js"></script>-->
+<!--&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+<!--<script src="...magnific-popup.min.js"></script>-->
+<!--<script src="..ic-popup-options.js"></script>-->
+<!--&lt;!&ndash; Main &ndash;&gt;-->
+<!--<script src="..s"></script>-->
+
+
+
+</body>
+</html>

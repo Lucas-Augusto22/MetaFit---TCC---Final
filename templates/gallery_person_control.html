@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MetaFit &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="freehtml5.co" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!--
+    //////////////////////////////////////////////////////
+
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FreeHTML5.co
+
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
+
+    //////////////////////////////////////////////////////
+     -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <!--    <link rel="stylesheet" href="../static/css/animate.css">-->
+    <!-- Icomoon Icon Fonts-->
+    <!--    <link rel="stylesheet" href="../static/css/icomoon.css">-->
+    <!-- Bootstrap  -->
+    <!--    <link rel="stylesheet" href="../static/css/bootstrap.css">-->
+
+    <!-- Magnific Popup -->
+    <!--    <link rel="stylesheet" href="../static/css/magnific-popup.css">-->
+
+    <!-- Owl Carousel  -->
+    <!--    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">-->
+    <!--    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">-->
+
+    <!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style_gallery_person_control.css') }}">
+
+    <!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+        <![endif]-->
+
+</head>
+<body class="hold-transition login-page row" style="background-image: url(../static/images/fundo_gallery_person_control.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+
+<section class="login row">
+
+    <div class="form-container sign-in-container">
+    <!-- Formulário para adicionar usuário à galeria -->
+    <form action="/adicionar_galeria" method="POST" style="margin-bottom: 30px;">
+        <h1>Cadastrar cliente na galeria</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="bi bi-person-add"></i></a>
+            <a href="#" class="social"><i class="bi bi-geo-alt-fill"></i></a>
+        </div>
+
+        <select name="usuario_select" required>
+            <option value="">Escolha um usuário para adicionar</option>
+            {% for usuario in usuarios %}
+            <option value="{{ usuario.id }}" {% if usuario.ja_na_galeria %}disabled{% endif %}>
+                {{ usuario.nome }} - {{ usuario.localizacao }}
+                {% if usuario.ja_na_galeria %}(Já na galeria){% endif %}
+            </option>
+            {% endfor %}
+        </select>
+
+        <input type="text" name="link_rede_social" placeholder="Link da rede social" required />
+
+        <button type="submit" class="btn-add">Adicionar à Galeria</button>
+    </form>
+
+    <!-- Separador -->
+    <hr style="margin: 20px 0; border: 1px solid white; width: 100%">
+
+    <!-- Formulário para remover usuário da galeria -->
+    <form action="/remover_galeria" method="POST">
+        <h1>Remover cliente da galeria</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="bi bi-person-dash"></i></a>
+            <a href="#" class="social"><i class="bi bi-trash-fill"></i></a>
+        </div>
+
+        <select name="usuario_remover" required>
+            <option value="">Escolha um usuário para remover</option>
+            {% for usuario in usuarios %}
+            {% if usuario.ja_na_galeria %}
+            <option value="{{ usuario.id }}">
+                {{ usuario.nome }} - {{ usuario.localizacao }}
+            </option>
+            {% endif %}
+            {% endfor %}
+        </select>
+
+        <div class="warning-box">
+            <i class="bi bi-exclamation-triangle"></i>
+            <span>Atenção: Esta ação removerá o usuário da galeria, mas manterá seu cadastro no sistema.</span>
+        </div>
+
+        <button type="submit" class="btn-remove">Remover da Galeria</button>
+    </form>
+</div>
+
+</section>
+
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<!--<script src="../static/js/main.js"></script>-->
+	<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+<!--&lt;!&ndash; jQuery Easing &ndash;&gt;-->
+<!--<script src="../static/js/jquery.easing.1.3.js"></script>-->
+<!--&lt;!&ndash; Bootstrap &ndash;&gt;-->
+<!--<script src="../static/js/bootstrap.min.js"></script>-->
+<!--&lt;!&ndash; Waypoints &ndash;&gt;-->
+<!--<script src="../static/js/jquery.waypoints.min.js"></script>-->
+<!--&lt;!&ndash; Stellar Parallax &ndash;&gt;-->
+<!--<script src="../static/js/jquery.stellar.min.js"></script>-->
+<!--&lt;!&ndash; Carousel &ndash;&gt;-->
+<!--<script src="../static/js/owl.carousel.min.js"></script>-->
+<!--&lt;!&ndash; countTo &ndash;&gt;-->
+<!--<script src="../static/js/jquery.countTo.js"></script>-->
+<!--&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+<!--<script src="../static/js/jquery.magnific-popup.min.js"></script>-->
+<!--<script src="../static/js/magnific-popup-options.js"></script>-->
+<!--&lt;!&ndash; Main &ndash;&gt;-->
+<!--<script src="../static/js/respond.min.js"></script>-->
+
+
+
+</body>
+</html>               <button class="ghost" id="signUp"><a href="gallery_adm.html" style="text-decoration: none; list-style-type: none; color: white">Voltar para a galeria</a></button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+</section>
+
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<!--<script src="../static/js/main.js"></script>-->
+	<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+<!--&lt;!&ndash; jQuery Easing &ndash;&gt;-->
+<!--<script src="../static/js/jquery.easing.1.3.js"></script>-->
+<!--&lt;!&ndash; Bootstrap &ndash;&gt;-->
+<!--<script src="../static/js/bootstrap.min.js"></script>-->
+<!--&lt;!&ndash; Waypoints &ndash;&gt;-->
+<!--<script src="../static/js/jquery.waypoints.min.js"></script>-->
+<!--&lt;!&ndash; Stellar Parallax &ndash;&gt;-->
+<!--<script src="../static/js/jquery.stellar.min.js"></script>-->
+<!--&lt;!&ndash; Carousel &ndash;&gt;-->
+<!--<script src="../static/js/owl.carousel.min.js"></script>-->
+<!--&lt;!&ndash; countTo &ndash;&gt;-->
+<!--<script src="../static/js/jquery.countTo.js"></script>-->
+<!--&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+<!--<script src="../static/js/jquery.magnific-popup.min.js"></script>-->
+<!--<script src="../static/js/magnific-popup-options.js"></script>-->
+<!--&lt;!&ndash; Main &ndash;&gt;-->
+<!--<script src="../static/js/respond.min.js"></script>-->
+
+
+
+</body>
+</html>

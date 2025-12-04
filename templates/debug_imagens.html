@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug de Imagens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+    <h1 class="mb-4">Debug de Imagens</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Informações do Usuário</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>ID:</strong> {{ usuario.id_cadastro if usuario else 'N/A' }}</p>
+            <p><strong>Nome:</strong> {{ usuario.nome_usuario if usuario else 'N/A' }}</p>
+            <p><strong>Treino ID:</strong> {{ treino.id_treino if treino else 'N/A' }}</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Imagens de Exercícios</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Exercício</th>
+                        <th>URL</th>
+                        <th>Caminho</th>
+                        <th>Existe?</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for img in imagens_exercicios %}
+                    <tr>
+                        <td>{{ img.nome }}</td>
+                        <td><code>{{ img.url }}</code></td>
+                        <td><code>{{ img.path }}</code></td>
+                        <td>
+                            {% if img.existe %}
+                            <span class="badge bg-success">SIM</span>
+                            {% else %}
+                            <span class="badge bg-danger">NÃO</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if img.existe %}
+                            <img src="{{ url_for('static', filename=img.url) }}" style="max-width: 100px; max-height: 100px;">
+                            {% else %}
+                            <span class="text-muted">Não disponível</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Imagens de Alimentos</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>URL</th>
+                        <th>Caminho</th>
+                        <th>Existe?</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for img in imagens_alimentos %}
+                    <tr>
+                        <td>{{ img.tipo }}</td>
+                        <td>{{ img.descricao }}</td>
+                        <td><code>{{ img.url }}</code></td>
+                        <td><code>{{ img.path }}</code></td>
+                        <td>
+                            {% if img.existe %}
+                            <span class="badge bg-success">SIM</span>
+                            {% else %}
+                            <span class="badge bg-danger">NÃO</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if img.existe %}
+                            <img src="{{ url_for('static', filename='images/food_images/' + img.url) }}" style="max-width: 100px; max-height: 100px;">
+                            {% else %}
+                            <span class="text-muted">Não disponível</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>GIFs de Exercícios</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Exercício</th>
+                        <th>URL</th>
+                        <th>Caminho</th>
+                        <th>Existe?</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for gif in gifs %}
+                    <tr>
+                        <td>{{ gif.nome }}</td>
+                        <td><code>{{ gif.url }}</code></td>
+                        <td><code>{{ gif.path }}</code></td>
+                        <td>
+                            {% if gif.existe %}
+                            <span class="badge bg-success">SIM</span>
+                            {% else %}
+                            <span class="badge bg-danger">NÃO</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if gif.existe %}
+                            <img src="{{ url_for('static', filename=gif.url) }}" style="max-width: 100px; max-height: 100px;">
+                            {% else %}
+                            <span class="text-muted">Não disponível</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Ações</h2>
+        </div>
+        <div class="card-body">
+            <a href="/all_my_training" class="btn btn-primary">Voltar para Meus Treinos</a>
+            <a href="/" class="btn btn-secondary">Voltar para Home</a>
+        </div>
+    </div>
+</body>
+</html>

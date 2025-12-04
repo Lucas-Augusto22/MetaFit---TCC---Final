@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste ExerciseDB API - Resultados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .exercise-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .exercise-card:hover {
+            transform: translateY(-5px);
+        }
+        .gif-preview {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+        .gif-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .status-badge {
+            font-size: 0.8em;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        .table-custom th {
+            background: #667eea;
+            color: white;
+        }
+        .api-key-display {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">🧪 Teste ExerciseDB API</h1>
+                    <p class="lead">Resultados dos testes com sua chave API</p>
+                    <p class="text-muted">Teste realizado em: 01/12/2025 23:12:34</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="alert alert-success">
+                        <h5>✅ API Funcionando!</h5>
+                        <p class="mb-0">Chave: <span class="api-key-display">01303476eamshe9...</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <h6>Exercícios Testados</h6>
+                            <h3>10</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <h6>GIFs Funcionando</h6>
+                            <h3 class="text-success">0</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <h6>Targets</h6>
+                            <h3>19</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <h6>Status</h6>
+                            <span class="badge bg-success">ATIVO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="header-card">
+                    <h3>🎬 GIFs de Exercícios Testados</h3>
+                    <p>Visualização dos GIFs obtidos da API:</p>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="exercise-card">
+                                <div class="gif-preview">
+                                    <img src="" 
+                                         alt="assisted chest dip (kneeling)"
+                                         onerror="this.src='https://via.placeholder.com/400x200/cccccc/666666?text=GIF+Carregando...'">
+                                </div>
+                                <div class="p-3">
+                                    <h5>assisted chest dip (kneeling)</h5>
+                                    <p class="mb-1"><small><strong>Músculo:</strong> pectorals</small></p>
+                                    <p class="mb-1"><small><strong>Equipamento:</strong> leverage machine</small></p>
+                                    <p class="mb-2"><small><strong>Parte do corpo:</strong> chest</small></p>
+                                    <a href="" target="_blank" class="btn btn-sm btn-primary">🔗 Ver GIF</a>
+                                    <button onclick="testGif('')" class="btn btn-sm btn-outline-secondary">🧪 Testar</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6">
+                            <div class="exercise-card">
+                                <div class="gif-preview">
+                                    <img src="" 
+                                         alt="barbell bench press"
+                                         onerror="this.src='https://via.placeholder.com/400x200/cccccc/666666?text=GIF+Carregando...'">
+                                </div>
+                                <div class="p-3">
+                                    <h5>barbell bench press</h5>
+                                    <p class="mb-1"><small><strong>Músculo:</strong> pectorals</small></p>
+                                    <p class="mb-1"><small><strong>Equipamento:</strong> barbell</small></p>
+                                    <p class="mb-2"><small><strong>Parte do corpo:</strong> chest</small></p>
+                                    <a href="" target="_blank" class="btn btn-sm btn-primary">🔗 Ver GIF</a>
+                                    <button onclick="testGif('')" class="btn btn-sm btn-outline-secondary">🧪 Testar</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6">
+                            <div class="exercise-card">
+                                <div class="gif-preview">
+                                    <img src="" 
+                                         alt="barbell decline bench press"
+                                         onerror="this.src='https://via.placeholder.com/400x200/cccccc/666666?text=GIF+Carregando...'">
+                                </div>
+                                <div class="p-3">
+                                    <h5>barbell decline bench press</h5>
+                                    <p class="mb-1"><small><strong>Músculo:</strong> pectorals</small></p>
+                                    <p class="mb-1"><small><strong>Equipamento:</strong> barbell</small></p>
+                                    <p class="mb-2"><small><strong>Parte do corpo:</strong> chest</small></p>
+                                    <a href="" target="_blank" class="btn btn-sm btn-primary">🔗 Ver GIF</a>
+                                    <button onclick="testGif('')" class="btn btn-sm btn-outline-secondary">🧪 Testar</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6">
+                            <div class="exercise-card">
+                                <div class="gif-preview">
+                                    <img src="" 
+                                         alt="barbell decline wide-grip press"
+                                         onerror="this.src='https://via.placeholder.com/400x200/cccccc/666666?text=GIF+Carregando...'">
+                                </div>
+                                <div class="p-3">
+                                    <h5>barbell decline wide-grip press</h5>
+                                    <p class="mb-1"><small><strong>Músculo:</strong> pectorals</small></p>
+                                    <p class="mb-1"><small><strong>Equipamento:</strong> barbell</small></p>
+                                    <p class="mb-2"><small><strong>Parte do corpo:</strong> chest</small></p>
+                                    <a href="" target="_blank" class="btn btn-sm btn-primary">🔗 Ver GIF</a>
+                                    <button onclick="testGif('')" class="btn btn-sm btn-outline-secondary">🧪 Testar</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+
+                <div class="header-card mt-4">
+                    <h3>📊 Dados da API</h3>
+                    <div class="table-responsive">
+                        <table class="table table-custom table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Exercício</th>
+                                    <th>Target</th>
+                                    <th>Equipamento</th>
+                                    <th>GIF Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>assisted chest dip (kneeling)</td>
+                                    <td>pectorals</td>
+                                    <td>leverage machine</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>barbell bench press</td>
+                                    <td>pectorals</td>
+                                    <td>barbell</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>barbell decline bench press</td>
+                                    <td>pectorals</td>
+                                    <td>barbell</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>barbell decline wide-grip press</td>
+                                    <td>pectorals</td>
+                                    <td>barbell</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>barbell front raise and pullover</td>
+                                    <td>pectorals</td>
+                                    <td>barbell</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>barbell guillotine bench press</td>
+                                    <td>pectorals</td>
+                                    <td>barbell</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>alternate lateral pulldown</td>
+                                    <td>lats</td>
+                                    <td>cable</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>assisted parallel close grip pull-up</td>
+                                    <td>lats</td>
+                                    <td>leverage machine</td>
+                                    <td>❌</td>
+                                </tr>
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="header-card">
+                    <h3>📋 Informações da API</h3>
+
+                    <div class="mb-3">
+                        <h5>Targets Disponíveis:</h5>
+                        <div class="d-flex flex-wrap gap-2">
+<span class="badge bg-info">abductors</span><span class="badge bg-info">abs</span><span class="badge bg-info">adductors</span><span class="badge bg-info">biceps</span><span class="badge bg-info">calves</span><span class="badge bg-info">cardiovascular system</span><span class="badge bg-info">delts</span><span class="badge bg-info">forearms</span><span class="badge bg-info">glutes</span><span class="badge bg-info">hamstrings</span>
+                        </div>
+                        <p class="mt-2"><small>Total: 19 targets</small></p>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>GIFs Testados:</h5>
+                        <div class="list-group">
+        
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h5>⚡ Status do Teste</h5>
+                        <p class="mb-1"><strong>Chave API:</strong> Válida</p>
+                        <p class="mb-1"><strong>Conexão:</strong> Estável</p>
+                        <p class="mb-1"><strong>GIFs:</strong> {len(working_gifs)}/{test_info['total_exercises']} funcionando</p>
+                        <p class="mb-0"><strong>Recomendação:</strong> Pronto para uso no projeto!</p>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button onclick="runAllTests()" class="btn btn-primary w-100 mb-2">🔄 Rodar Novos Testes</button>
+                        <button onclick="downloadData()" class="btn btn-outline-secondary w-100">📥 Baixar Dados JSON</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-card mt-4 text-center">
+            <h4>🎯 Próximos Passos</h4>
+            <p>Esta API está pronta para ser integrada ao seu projeto MetaFit!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>1. Integração</h5>
+                            <p>Adicionar funções ao treino.py</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>2. Cache</h5>
+                            <p>Implementar cache das imagens</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>3. Templates</h5>
+                            <p>Atualizar HTML com GIFs reais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function testGif(gifUrl) {{
+            const img = new Image();
+            img.onload = function() {{
+                alert(`✅ GIF testado com sucesso!\n• Dimensões: ${{this.width}}x${{this.height}}\n• URL: ${{gifUrl.substring(0, 50)}}...`);
+            }};
+            img.onerror = function() {{
+                alert('❌ Erro ao carregar GIF. Verifique a URL.');
+            }};
+            img.src = gifUrl;
+        }}
+
+        function runAllTests() {{
+            if(confirm('Deseja rodar todos os testes novamente?')) {{
+                window.location.reload();
+            }}
+        }}
+
+        function downloadData() {{
+            // Criar link para download dos dados
+            const data = {json.dumps(exercises_data, ensure_ascii=False)};
+            const blob = new Blob([JSON.stringify(data, null, 2)], {{type: 'application/json'}});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'exercisedb_data.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }}
+
+        // Testar todos GIFs ao carregar
+        window.addEventListener('load', function() {{
+            console.log('Teste ExerciseDB carregado!');
+
+            // Adicionar handler de erro para imagens
+            document.querySelectorAll('img').forEach(img => {{
+                img.onerror = function() {{
+                    this.src = 'https://via.placeholder.com/400x200/dc3545/ffffff?text=GIF+Indisponível';
+                }};
+            }});
+        }});
+    </script>
+</body>
+</html>

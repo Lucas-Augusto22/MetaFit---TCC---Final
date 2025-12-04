@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Metafit &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="freehtml5.co" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--
+    //////////////////////////////////////////////////////
+
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FreeHTML5.co
+
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
+
+    //////////////////////////////////////////////////////
+     -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">-->
+
+    <!-- Animate.css -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+        <![endif]-->
+
+</head>
+<body>
+
+<div class="fh5co-loader"></div>
+
+<div id="page">
+    <nav class="fh5co-nav" role="navigation">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-right">
+                        <p class="num">Call: +01 123 456 7890</p>
+                        <ul class="fh5co-social">
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            <li><a href="#"><i class="icon-github"></i></a></li>
+                            <li><a href="/login"><i class="bi bi-person-circle"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="fh5co-logo"><a href="/">MetaFit<span>.</span></a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="has-dropdown">
+                                <a href="/" >Home</a>
+                                <ul class="dropdown">
+<!--                                    <li><a href="about.html">Sobre nós</a></li>-->
+                                    <li><a href="/">Voltar página usuário</a></li>
+                                </ul>
+                            </li>
+                            <!--                            <li class="has-dropdown">-->
+                            <!--                                <a href="experts.html">Treinos e experts</a>-->
+                            <!--                                <ul class="dropdown">-->
+                            <!--                                    <li><a href="../templates/gallery_adm.html">Galeria da Academia</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </li>-->
+                            <li class="active"><a href="/usuarios_cadastrados">Usuários cadastrados</a></li>
+                            <li><a href="/gallery_adm">Controle da galeria</a></li>
+                            <li><a href="/logout">Deslogar</a></li>
+<!--                            <li>-->
+<!--                                <a href="feeding.html">Alimentação</a>-->
+<!--                            </li>-->
+                            <!--                            <li><a href="../templates/contact.html">Contato</a></li>-->
+                        </ul>
+                        <!--						<div class="col-xs-12 text-right menu-1">-->
+                        <!--							<i class="bi bi-person-circle"><a href="../MetaFitEstilo/templates/login.html"></a></i>-->
+                        <!--						</div>-->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(../static/images/fundo_usuarios_cadastrados.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="display-t">
+                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                            <h1>Usuários Cadastrados</h1>
+                            <!--							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="fh5co-cover container conteiner-register-control">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin-top: 100px;">
+                <h2>Usuários Cadastrados</h2>
+            </div>
+        </div>
+
+        <!-- Adicione este link no seu header para administradores -->
+{#<div class="row row-bottom-padded-md d-flex justify-content-space-around align-items-center row-cols-4" style="width: 100%; height: auto; display: flex; flex-wrap: wrap;">#}
+{##}
+{#    <!-- DEBUG: Verificar se a variável existe -->#}
+{#    <!-- {{ usuarios }} -->#}
+{##}
+{#    {% if usuarios %}#}
+{#        <p style="color: green; width: 100%; text-align: center;">DEBUG: Total de usuários: {{ usuarios|length }}</p>#}
+{##}
+{#        {% for usuario in usuarios %}#}
+{#        <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">#}
+{#            <div class="image"></div>#}
+{#            <div class="wave"></div>#}
+{#            <div class="wave"></div>#}
+{#            <div class="wave"></div>#}
+{##}
+{#            <div class="infotop">#}
+{#                {% if usuario[4] %}#}
+{#                    <img src="{{ url_for('static', filename='images/uploads/' + usuario[4]) }}" alt="{{ usuario[1] }}" class="icon">#}
+{#                {% else %}#}
+{#                    <img src="{{ url_for('static', filename='images/Lucas.jpg') }}" alt="Imagem padrão" class="icon">#}
+{#                {% endif %}#}
+{##}
+{#                <p><strong>{{ usuario[1] }}</strong></p>#}
+{#                <br>#}
+{#                <div class="name">Email: {{ usuario[2] }}</div>#}
+{#                <div class="name">CEP: {{ usuario[3] }}</div>#}
+{##}
+{#                <form action="/excluir_usuario/{{ usuario[0] }}" method="POST" style="display: inline;">#}
+{#                    <button type="submit" class="btn-card-wave" onclick="return confirm('Tem certeza que deseja excluir o usuário {{ usuario[1] }}?')">#}
+{#                        Excluir#}
+{#                    </button>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#    {% else %}#}
+{#        <p style="color: red; width: 100%; text-align: center;">DEBUG: Nenhum usuário encontrado ou variável 'usuarios' é None/False</p>#}
+{##}
+{#        <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">#}
+{#            <div class="image"></div>#}
+{#            <div class="wave"></div>#}
+{#            <div class="wave"></div>#}
+{#            <div class="wave"></div>#}
+{##}
+{#            <div class="infotop">#}
+{#                <img src="{{ url_for('static', filename='images/Lucas.jpg') }}" alt="" class="icon">#}
+{#                <p>Nenhum usuário cadastrado</p>#}
+{#                <br>#}
+{#                <div class="name">Não há usuários no sistema</div>#}
+{#                <div class="name">Cadastre o primeiro usuário</div>#}
+{##}
+{#                <button class="btn-card-wave" disabled>Excluir</button>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endif %}#}
+{#</div>#}
+
+        <div class="row row-bottom-padded-md d-flex justify-content-space-around align-items-center row-cols-4" style="width: 100%; height: auto; display: flex; flex-wrap: wrap;">
+    {% if usuarios %}
+        {% for usuario in usuarios %}
+        <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">
+            <div class="image"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+
+            <div class="infotop">
+                {% if usuario[4] %}
+                    <img src="{{ url_for('static', filename='images/uploads/' + usuario[4]) }}"
+                         alt="{{ usuario[1] }}"
+                         class="icon"
+                         onerror="this.src='{{ url_for('static', filename='images/Lucas.jpg') }}'">
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/imagem_usuario_icone.jpg') }}"
+                         alt="Imagem padrão"
+                         class="icon">
+                {% endif %}
+
+                <p><strong>{{ usuario[1] }}</strong></p>
+                <br>
+                <div class="name">Email: {{ usuario[2] }}</div>
+                <div class="name">CEP: {{ usuario[3] }}</div>
+
+                <form action="/excluir_usuario/{{ usuario[0] }}" method="POST" style="display: inline;">
+                    <button type="submit" class="btn-card-wave" onclick="return confirm('Tem certeza que deseja excluir o usuário {{ usuario[1] }}?')">
+                        Excluir
+                    </button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">
+            <div class="image"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+
+            <div class="infotop">
+                <img src="{{ url_for('static', filename='images/Lucas.jpg') }}" alt="" class="icon">
+                <p>Nenhum usuário cadastrado</p>
+                <br>
+                <div class="name">Não há usuários no sistema</div>
+                <div class="name">Cadastre o primeiro usuário</div>
+
+                <button class="btn-card-wave" disabled>Excluir</button>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{#        <div class="row row-bottom-padded-md d-flex justify-content-space-around align-items-center row-cols-4" style="width: 100%; height: auto; display: flex; flex-wrap: wrap;">#}
+{#            <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="e-card playing col-lg-5 col-md-4 col-xxl-4 col-xl-4">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="e-card playing col-lg-5 col-md-4 col-xxl-4 col-xl-4 ">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{##}
+{#        <div class="row row-bottom-padded-md d-flex justify-content-space-around align-items-center row-cols-4" style="width: 100%; height: auto; display: flex; flex-wrap: wrap;">#}
+{#            <div class="e-card playing col-lg-5 col-md-4 col-xxl-4 col-xl-4 ">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{##}
+{#            <div class="e-card playing col-lg-4 col-md-4 col-xxl-4 col-xl-4">#}
+{#                <div class="image"></div>#}
+{##}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{#                <div class="wave"></div>#}
+{##}
+{##}
+{#                <div class="infotop">#}
+{#                    <img src="../static/images/Lucas.jpg" alt="" class="icon">#}
+{#                    <p>Lucas Augusto</p>#}
+{#                    <br>#}
+{#                    <div class="name">lucas@gmail.com</div>#}
+{#                    <div class="name">São Paulo, Brazil</div>#}
+{##}
+{#                    <button class="btn-card-wave">Excluir</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+    </section>
+
+
+    <footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(../static/images/img_bg_1.jpg);" role="contentinfo">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row row-pb-md">
+                <div class="col-md-4 fh5co-widget">
+                    <h3>Um pouco sobre MetaFit.</h3>
+                    <p>O local ideal para montar seus treinos e descobrir os melhores exercícios e alimetação para você.</p>
+                    <p><a class="btn btn-primary" href="#">Monte seu treino</a></p>
+                </div>
+                <div class="col-md-8">
+                    <h3>Classes</h3>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <ul class="fh5co-footer-links">
+                            <li><a href="#">Cardio</a></li>
+                            <li><a href="#">Body Building</a></li>
+                            <li><a href="#">Yoga</a></li>
+                            <li><a href="#">feeding</a></li>
+                            <li><a href="#">Running</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <ul class="fh5co-footer-links">
+                            <li><a href="#">Push-ups</a></li>
+                            <li><a href="#">Weight Lifting</a></li>
+                            <li><a href="#">Stretching</a></li>
+                            <li><a href="#">Workout </a></li>
+                            <li><a href="#">Crunches </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <ul class="fh5co-footer-links">
+                            <li><a href="#">Pull-up</a></li>
+                            <li><a href="#">Body Building</a></li>
+                            <li><a href="#">Teams</a></li>
+                            <li><a href="#">Advertise</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+                        <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+                    </p>
+                    <p>
+                    <ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
+<!-- jQuery Easing -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- countTo -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
+

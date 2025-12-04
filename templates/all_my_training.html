@@ -1,0 +1,1139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Metafit &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="freehtml5.co" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--
+    //////////////////////////////////////////////////////
+
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FreeHTML5.co
+
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
+
+    //////////////////////////////////////////////////////
+     -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Animate.css -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style_training.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+        <![endif]-->
+
+</head>
+<body>
+
+<div class="fh5co-loader"></div>
+
+<div id="page">
+    <nav class="fh5co-nav" role="navigation">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-right">
+                        <p class="num">Call: +01 123 456 7890</p>
+                        <ul class="fh5co-social">
+                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+							<li><a href="#"><i class="bi bi-dribbble"></i></a></li>
+							<li><a href="#"><i class="bi bi-github"></i></a></li>
+							<li>
+    {% if session.user_imagem and session.user_imagem != 'default_avatar.png' and session.user_imagem != 'None' and session.user_imagem != '' %}
+        <a href="/login" style="">
+            <img src="{{ url_for('static', filename='images/uploads/' + session.user_imagem) }}"
+                 alt="Foto de perfil"
+                 style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;"
+                 onerror="this.onerror=null; this.style.display='none'; document.getElementById('fallback-{{ session.user_id }}').style.display='block';">
+            <img id="fallback-{{ session.user_id }}"
+                 src="{{ url_for('static', filename='images/imagem_usuario_icone.jpg') }}"
+                 alt="Foto padrão"
+                 style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; display: none;">
+        </a>
+    {% else %}
+        <a href="/login">
+            <img src="{{ url_for('static', filename='images/imagem_usuario_icone.jpg') }}"
+                 alt="Foto padrão"
+                 style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+        </a>
+    {% endif %}
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-menu">
+					<div class="container">
+					<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/">MetaFit<span>.</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="has-dropdown">
+								<a href="/">Home</a>
+								<ul class="dropdown">
+									<li><a href="/about">Sobre nós</a></li>
+									<li><a href="/adm">Página do ADM</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="/experts">Treinos e experts</a>
+								<ul class="dropdown">
+									<li><a href="/gallery">Galeria da Academia</a></li>
+								</ul>
+							</li>
+							<li><a href="/my_level">Descubra seu nível</a></li>
+							<li class="active"><a href="/all_my_training">Meu treino</a></li>
+							<li>
+								<a href="/feeding">Alimentação</a>
+							</li>
+							<li><a href="/contact">Contato</a></li>
+						</ul>
+<!--						<div class="col-xs-12 text-right menu-1">-->
+<!--							<i class="bi bi-person-circle"><a href="../MetaFitEstilo/templates/login.html"></a></i>-->
+<!--						</div>-->
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+    </nav>
+
+    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm header-my_training" role="banner" style="background-image:url(../static/images/fundo_meu_treino.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="display-t">
+                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                            <h1>Pronto, seu treino e sua alimentação estão prontos</h1>
+                            <!--							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="resultado fh5co-cover">
+
+        <div class="cookieCard" style="background-image: url(../static/images/fundo_veja_seu_treino.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+
+            <div class="container3">
+    <div class="slide">
+        {% if exercicios and exercicios|length > 0 %}
+            {% for exercicio in exercicios %}
+            <div class="item" style="background-image: url('{{ exercicio.imagem_exercicio if exercicio.imagem_exercicio.startswith('http') else url_for('static', filename=exercicio.imagem_exercicio) }}');">
+                <div class="content">
+                    <div class="name">{{ exercicio.nome }}</div>
+                    <div class="des">
+                        {{ exercicio.series }} séries, {{ exercicio.reps }}
+                        {% if exercicio.descricao %}<br><small>{{ exercicio.descricao }}</small>{% endif %}
+                    </div>
+                    <div class="d-flex align-items-center gap-3 flex-column text-justify">
+                        <div class="d-flex flex-row text-justify h-auto align-items-center flex-wrap" style="width: 100%; gap: 30px">
+                            <i class="bi bi-calendar-check text-white" style="font-size: 30px"></i>
+                            <a class="seeMore">
+                                <button class="btn btn-light">{{ exercicio.dia }}</button>
+                            </a>
+                            {% if exercicio.tipo %}
+                            <span class="badge bg-info">{{ exercicio.tipo }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="section-4 col-12">
+                            <div class="row">
+                                <figure class="figure">
+                                    {% if exercicio.gif_url %}
+                                    <img class="gifs img-fluid"
+                                         src="{{ url_for('static', filename=exercicio.gif_url) }}"
+                                         alt="{{ exercicio.nome }}"
+                                         onerror="this.src='{{ url_for('static', filename='images/gifs/default_exercise.gif') }}'">
+                                    {% else %}
+                                    <img class="gifs img-fluid"
+                                         src="{{ url_for('static', filename='images/gifs/default_exercise.gif') }}"
+                                         alt="Demonstração">
+                                    {% endif %}
+                                    <div>
+                                        <h3>Exemplo <span>Prático</span></h3>
+                                        <a href="#"></a>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="item" style="background-image: url('{{ url_for('static', filename='images/exercise_images/default_exercise.jpg') }}');">
+            <div class="content">
+                <div class="name">Seu Treino Personalizado</div>
+                <div class="des">Complete seu formulário para gerar seu treino personalizado</div>
+                <div class="d-flex align-items-center gap-3 flex-column text-justify">
+                    <div class="d-flex flex-row text-justify h-auto align-items-center flex-wrap" style="width: 100%; gap: 30px">
+                        <i class="bi bi-calendar-check text-white" style="font-size: 30px"></i>
+                        <a class="seeMore" href="/my_level">
+                            <button class="btn btn-light">Criar Meu Treino</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="button">
+        <button class="prev">◁</button>
+        <button class="next">▷</button>
+    </div>
+
+    <!-- Contador de exercícios -->
+    {% if exercicios and exercicios|length > 0 %}
+    <div class="text-center mt-3">
+        <small class="text-muted">
+            {{ exercicios|length }} exercícios personalizados para você
+            {% if api_data and api_data.exercise_plan %}
+                • {{ api_data.exercise_plan.total_exercises }} exercícios no total
+            {% endif %}
+        </small>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Botão para atualizar treino -->
+{#<div class="text-center mt-4">#}
+{#    <a href="/my_level" class="btn btn-primary me-2">#}
+{#        <i class="bi bi-arrow-clockwise"></i> Atualizar Meu Treino#}
+{#    </a>#}
+{#    <a href="/my_level" class="btn btn-outline-primary">#}
+{#        <i class="bi bi-calendar-plus"></i> Gerenciar Agenda#}
+{#    </a>#}
+{#</div>#}
+
+        </div>
+
+<!-- Substitua a parte da alimentação por este código: -->
+
+    <!-- DIETAS - COM CORREÇÃO DAS IMAGENS -->
+        <div class="cookieCard fh5co-cover" style="background-image:url(../static/images/fundo_veja_sua_alimentacao.jpg);" data-stellar-background-ratio="0.5">
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+            <h2>Plano Alimentar Personalizado</h2>
+            <p class="subtitle">
+                Sua dieta baseada no seu objetivo:
+                <strong>{{ treino.objetivo_usuario if treino else 'Personalizada' }}</strong>
+                {% if api_data and api_data.nutrition_plan %}
+                    • {{ api_data.nutrition_plan.calories_target_kcal|round|int }} kcal/dia
+                {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <div class="CardsResult-feeding row" style="flex-wrap: wrap">
+        <!-- Mantenha todo o código das dietas EXATAMENTE como está -->
+        <!-- Café da manhã -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.cafe_manha %}
+                        {% if food_images.cafe_manha.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.cafe_manha }}"
+                             alt="Café da manhã">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.cafe_manha) }}"
+                             alt="Café da manhã"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Café da manhã">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Café da manhã</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">6:00 AM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.cafe_manha if dieta and dieta.cafe_manha else "3 ovos + pão integral + banana" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lanche da manhã -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.lanche_manha %}
+                        {% if food_images.lanche_manha.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.lanche_manha }}"
+                             alt="Lanche da manhã">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.lanche_manha) }}"
+                             alt="Lanche da manhã"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Lanche da manhã">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Lanche da manhã</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">10:00 AM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.lanche_manha if dieta and dieta.lanche_manha else "Iogurte natural + aveia + mel" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Almoço -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.almoco %}
+                        {% if food_images.almoco.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.almoco }}"
+                             alt="Almoço">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.almoco) }}"
+                             alt="Almoço"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Almoço">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Almoço</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">12:00 PM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.almoco if dieta and dieta.almoco else "Frango + arroz integral + feijão + salada + azeite" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lanche da tarde -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.lanche_tarde %}
+                        {% if food_images.lanche_tarde.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.lanche_tarde }}"
+                             alt="Lanche da tarde">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.lanche_tarde) }}"
+                             alt="Lanche da tarde"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Lanche da tarde">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Lanche da tarde</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">16:00 PM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.lanche_tarde if dieta and dieta.lanche_tarde else "Sanduíche natural + fruta" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jantar -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.jantar %}
+                        {% if food_images.jantar.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.jantar }}"
+                             alt="Jantar">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.jantar) }}"
+                             alt="Jantar"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Jantar">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Jantar</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">19:00 PM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.jantar if dieta and dieta.jantar else "Peixe + batata doce + brócolis" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ceia -->
+        <div class="col-lg-4 col-md-6 col-xxl-4 col-xl-4">
+            <div class="fh5co-blog animate-box">
+                <a href="#">
+                    {% if food_images and food_images.ceia %}
+                        {% if food_images.ceia.startswith('http') %}
+                        <img class="img-responsive"
+                             src="{{ food_images.ceia }}"
+                             alt="Ceia">
+                        {% else %}
+                        <img class="img-responsive"
+                             src="{{ url_for('static', filename=food_images.ceia) }}"
+                             alt="Ceia"
+                             onerror="this.src='{{ url_for('static', filename='images/food_images/default_food.jpg') }}'">
+                        {% endif %}
+                    {% else %}
+                    <img class="img-responsive"
+                         src="{{ url_for('static', filename='images/food_images/default_food.jpg') }}"
+                         alt="Ceia">
+                    {% endif %}
+                </a>
+                <div class="blog-text">
+                    <h3><a href="#">Ceia</a></h3>
+                    <span class="posted_on">MetaFit</span>
+                    <span class="comment"><a href="">21:00 PM<i class="icon-speech-bubble"></i></a></span>
+                    <p>{{ dieta.ceia if dieta and dieta.ceia else "Shake proteico ou chá" }}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Informações Nutricionais -->
+    {% if api_data and api_data.assessment %}
+    <div class="row animate-box mt-5">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Informações Nutricionais</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="nutrition-box">
+                                <h4>Calorias Diárias</h4>
+                                <p class="nutrition-value">{{ api_data.assessment.recommended_calories_kcal|round|int }} kcal</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="nutrition-box">
+                                <h4>Proteínas</h4>
+                                <p class="nutrition-value">{{ api_data.assessment.macros.protein_g }}g</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="nutrition-box">
+                                <h4>Carboidratos</h4>
+                                <p class="nutrition-value">{{ api_data.assessment.macros.carbs_g }}g</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="nutrition-box">
+                                <h4>Gorduras</h4>
+                                <p class="nutrition-value">{{ api_data.assessment.macros.fat_g }}g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+    </section>
+
+    <div id="fh5co-schedule" class="fh5co-bg" style="background-image: url(../static/images/img_bg_1.jpg);">
+        <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+            <h2>Minha Agenda de Treinos</h2>
+            <p class="subtitle">Organize seus treinos e alimentação ao longo da semana</p>
+        </div>
+    </div>
+
+    <div class="row animate-box">
+        <div class="fh5co-tabs">
+            <!-- Abas dos dias da semana -->
+            <ul class="fh5co-tab-nav">
+                <li class="active">
+                    <a href="#" data-tab="1">
+                        <span class="visible-xs">D</span>
+                        <span class="hidden-xs">Domingo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="2">
+                        <span class="visible-xs">S</span>
+                        <span class="hidden-xs">Segunda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="3">
+                        <span class="visible-xs">T</span>
+                        <span class="hidden-xs">Terça</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="4">
+                        <span class="visible-xs">Q</span>
+                        <span class="hidden-xs">Quarta</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="5">
+                        <span class="visible-xs">Q</span>
+                        <span class="hidden-xs">Quinta</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="6">
+                        <span class="visible-xs">S</span>
+                        <span class="hidden-xs">Sexta</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="7">
+                        <span class="visible-xs">S</span>
+                        <span class="hidden-xs">Sábado</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Conteúdo das abas -->
+            <div class="fh5co-tab-content-wrap">
+
+                <!-- DOMINGO -->
+                <div class="fh5co-tab-content tab-content active" data-tab-content="1">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda.Domingo %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Dia de descanso</h4>
+                            <small class="activity-description">Nenhuma atividade programada</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Adicionar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- SEGUNDA-FEIRA -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="2">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda['Segunda-feira'] %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Nenhuma atividade</h4>
+                            <small class="activity-description">Adicione treinos ou refeições</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Programar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- TERÇA-FEIRA -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="3">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda['Terça-feira'] %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Nenhuma atividade</h4>
+                            <small class="activity-description">Adicione treinos ou refeições</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Programar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- QUARTA-FEIRA -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="4">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda['Quarta-feira'] %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Nenhuma atividade</h4>
+                            <small class="activity-description">Adicione treinos ou refeições</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Programar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- QUINTA-FEIRA -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="5">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda['Quinta-feira'] %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Nenhuma atividade</h4>
+                            <small class="activity-description">Adicione treinos ou refeições</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Programar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- SEXTA-FEIRA -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="6">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda['Sexta-feira'] %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Nenhuma atividade</h4>
+                            <small class="activity-description">Adicione treinos ou refeições</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Programar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- SÁBADO -->
+                <div class="fh5co-tab-content tab-content" data-tab-content="7">
+                    <ul class="class-schedule">
+                        {% for atividade in agenda.Sábado %}
+                        <li class="text-center agenda-item">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename=atividade.icone) }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="{{ atividade.treino }}"
+                                     title="{{ atividade.treino }}">
+                            </span>
+                            <span class="time">{{ atividade.horario if atividade.horario else '--:--' }}</span>
+                            <h4 class="activity-title">{{ atividade.treino }}</h4>
+                            <small class="activity-description">{{ atividade.objetivo if atividade.objetivo else 'Atividade programada' }}</small>
+                        </li>
+                        {% else %}
+                        <li class="text-center agenda-item empty-day">
+                            <span class="icon-container">
+                                <img src="{{ url_for('static', filename='images/icons_agenda/mdi_sleep.svg') }}"
+                                     class="img-responsive agenda-icon"
+                                     alt="Descanso">
+                            </span>
+                            <span class="time">--:--</span>
+                            <h4 class="activity-title">Dia de descanso</h4>
+                            <small class="activity-description">Nenhuma atividade programada</small>
+                            <div class="add-activity-hint">
+                                <a href="/my_level" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Adicionar atividade
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Estatísticas da agenda -->
+    <div class="row animate-box mt-5">
+        <div class="col-md-12 text-center">
+            <div class="agenda-stats">
+                <h3>Resumo da Semana</h3>
+                <div class="stats-container">
+                    {% set total_atividades = agenda.Domingo|length + agenda['Segunda-feira']|length +
+                                              agenda['Terça-feira']|length + agenda['Quarta-feira']|length +
+                                              agenda['Quinta-feira']|length + agenda['Sexta-feira']|length +
+                                              agenda.Sábado|length %}
+
+                    <div class="stat-item">
+                        <span class="stat-number">{{ total_atividades }}</span>
+                        <span class="stat-label">Atividades Programadas</span>
+                    </div>
+
+                    <div class="stat-item">
+                        {% set dias_com_atividade = 0 %}
+                        {% for dia, atividades in agenda.items() %}
+                            {% if atividades|length > 0 %}
+                                {% set dias_com_atividade = dias_com_atividade + 1 %}
+                            {% endif %}
+                        {% endfor %}
+                        <span class="stat-number">{{ dias_com_atividade }}/7</span>
+                        <span class="stat-label">Dias com Atividades</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <a href="/my_level" class="btn btn-primary">
+                            <i class="bi bi-calendar-plus"></i> Gerenciar Agenda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- JavaScript para controle das abas -->
+<!-- JavaScript para controle das abas E carrossel -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ========== 1. CARROSSEL ==========
+    initCarousel();
+
+    // ========== 2. ABAS DA AGENDA ==========
+    initAgendaTabs();
+
+    // ========== 3. ANIMAÇÕES ==========
+    initAnimations();
+});
+
+function initCarousel() {
+    console.log('Inicializando carrossel...');
+
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    let slide = document.querySelector(".slide");
+
+    if (!next || !prev || !slide) {
+        console.log('Carrossel não encontrado na página');
+        return;
+    }
+
+    console.log('Elementos do carrossel encontrados');
+
+    // Função para próxima slide
+    next.addEventListener("click", function () {
+        let items = document.querySelectorAll(".item");
+        if (items.length > 0) {
+            slide.appendChild(items[0]);
+        }
+    });
+
+    // Função para slide anterior
+    prev.addEventListener("click", function () {
+        let items = document.querySelectorAll(".item");
+        if (items.length > 0) {
+            slide.prepend(items[items.length - 1]);
+        }
+    });
+
+    // Auto-play opcional (remova se não quiser)
+    // let autoPlay = setInterval(() => {
+    //     let items = document.querySelectorAll(".item");
+    //     if (items.length > 0) {
+    //         slide.appendChild(items[0]);
+    //     }
+    // }, 5000);
+
+    console.log('Carrossel inicializado com sucesso');
+}
+
+function initAgendaTabs() {
+    console.log('Inicializando abas da agenda...');
+
+    const tabNavItems = document.querySelectorAll('.fh5co-tab-nav a');
+    const tabContents = document.querySelectorAll('.fh5co-tab-content');
+
+    if (tabNavItems.length === 0 || tabContents.length === 0) {
+        console.log('Abas da agenda não encontradas');
+        return;
+    }
+
+    tabNavItems.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            console.log('Clicou na aba:', this.getAttribute('data-tab'));
+
+            // Remover classe active de todas as abas
+            tabNavItems.forEach(item => {
+                item.parentElement.classList.remove('active');
+            });
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Adicionar classe active à aba clicada
+            this.parentElement.classList.add('active');
+
+            // Mostrar conteúdo correspondente
+            const tabId = this.getAttribute('data-tab');
+            const targetContent = document.querySelector(`[data-tab-content="${tabId}"]`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+                console.log('Mostrando conteúdo da aba:', tabId);
+            }
+        });
+    });
+
+    // Inicializar com primeira aba ativa
+    if (tabNavItems.length > 0) {
+        const firstTab = tabNavItems[0];
+        firstTab.click();
+    }
+
+    console.log('Abas da agenda inicializadas');
+}
+
+function initAnimations() {
+    // Animar itens da agenda
+    const agendaItems = document.querySelectorAll('.agenda-item');
+    agendaItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Adicionar efeito de hover nos cards de dieta
+    const dietCards = document.querySelectorAll('.fh5co-blog');
+    dietCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Adicionar funcionalidade de refresh
+    const refreshBtn = document.querySelector('[href="?refresh=true"]');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Atualizando dados...');
+            window.location.href = '/all_my_training?refresh=true';
+        });
+    }
+}
+
+// Função para recarregar apenas o carrossel (se necessário)
+function reloadCarousel() {
+    console.log('Recarregando carrossel...');
+    initCarousel();
+}
+
+// Expor função global para debug
+window.reloadCarousel = reloadCarousel;
+</script>
+
+{#<script>#}
+{#document.addEventListener('DOMContentLoaded', function() {#}
+{#    // Controle das abas da agenda#}
+{#    const tabNavItems = document.querySelectorAll('.fh5co-tab-nav a');#}
+{#    const tabContents = document.querySelectorAll('.fh5co-tab-content');#}
+{##}
+{#    tabNavItems.forEach(tab => {#}
+{#        tab.addEventListener('click', function(e) {#}
+{#            e.preventDefault();#}
+{##}
+{#            // Remover classe active de todas as abas#}
+{#            tabNavItems.forEach(item => item.parentElement.classList.remove('active'));#}
+{#            tabContents.forEach(content => content.classList.remove('active'));#}
+{##}
+{#            // Adicionar classe active à aba clicada#}
+{#            this.parentElement.classList.add('active');#}
+{##}
+{#            // Mostrar conteúdo correspondente#}
+{#            const tabId = this.getAttribute('data-tab');#}
+{#            const targetContent = document.querySelector(`[data-tab-content="${tabId}"]`);#}
+{#            if (targetContent) {#}
+{#                targetContent.classList.add('active');#}
+{#            }#}
+{#        });#}
+{#    });#}
+{##}
+{#    // Inicializar com primeira aba ativa#}
+{#    if (tabNavItems.length > 0) {#}
+{#        tabNavItems[0].click();#}
+{#    }#}
+{##}
+{#    // Animar itens da agenda#}
+{#    const agendaItems = document.querySelectorAll('.agenda-item');#}
+{#    agendaItems.forEach((item, index) => {#}
+{#        item.style.animationDelay = `${index * 0.1}s`;#}
+{#    });#}
+{#});#}
+{#</script>#}
+</div>
+{#</div>#}
+
+
+
+
+    <footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(static/images/img_bg_1.jpg);" role="contentinfo">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>Um pouco sobre MetaFit.</h3>
+					<p>O local ideal para montar seus treinos e descobrir os melhores exercícios e alimetação para você.</p>
+					<p><a class="btn btn-primary" href="my_level.html">Monte seu treino</a></p>
+				</div>
+				<div class="col-md-8">
+					<h3>Classes</h3>
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<ul class="fh5co-footer-links">
+							<li><a href="#">Cardio</a></li>
+							<li><a href="#">Body Building</a></li>
+							<li><a href="#">Yoga</a></li>
+							<li><a href="#">feeding</a></li>
+							<li><a href="#">Running</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<ul class="fh5co-footer-links">
+							<li><a href="#">Push-ups</a></li>
+							<li><a href="#">Weight Lifting</a></li>
+							<li><a href="#">Stretching</a></li>
+							<li><a href="#">Workout </a></li>
+							<li><a href="#">Crunches </a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<ul class="fh5co-footer-links">
+							<li><a href="#">Pull-up</a></li>
+							<li><a href="#">Body Building</a></li>
+							<li><a href="#">Teams</a></li>
+							<li><a href="#">Advertise</a></li>
+							<li><a href="#">API</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+{#</div>#}
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+    <!-- jQuery -->
+{#	<script src="{{ url_for('static', filename='js/my_level.js') }}"></script>#}
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/treino.js') }}"></script>
+    <!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- countTo -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
+
